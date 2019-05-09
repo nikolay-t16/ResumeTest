@@ -1,0 +1,33 @@
+{
+  "name": "resumetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "devDependencies": {
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "pug-html-loader": "^1.1.5",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "scripts": {
+    "test": "test",
+    "dev": "webpack --watch --mode development",
+    "prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolay-t16/ResumeTest.git"
+  },
+  "author": "Nikolay Tereshchenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikolay-t16/ResumeTest/issues"
+  },
+  "homepage": "https://github.com/nikolay-t16/ResumeTest#readme"
+}
