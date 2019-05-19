@@ -1,0 +1,54 @@
+$background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+$pGorizont: 10;
+$pVertical: 20;
+$border: 2;
+.button {
+	padding: $pGorizont + px $pVertical + px;
+	border-radius: 22px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	border: none;
+	background: $background;
+	width: min-content;
+}
+
+.button:hover {
+	opacity: 0.5;
+}
+
+.button_empty {
+	padding: ($pGorizont - 2) + px ($pVertical - 2) + px;
+	border-radius: 22px;
+	border: none;
+	background: $background;
+	width: min-content;
+	color: #BC9CFF;
+	background: white;
+	position: relative;
+}
+
+.button_empty:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	margin: -2px;
+	border-radius: inherit;
+	background: $background;
+}
+
+.button_empty:hover {
+	opacity: 1;
+}
+
+.button_empty:hover:before {
+	opacity: 0.5;
+}
