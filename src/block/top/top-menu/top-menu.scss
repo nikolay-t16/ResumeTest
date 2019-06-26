@@ -1,0 +1,19 @@
+.top-menu {
+	display: flex;
+	align-items: center;
+}
+
+.top-menu__item {
+	margin-left: 30px;
+	display: flex;
+	align-items: center;
+	color: rgba(31, 32, 65, 0.5);
+}
+.top-menu__item_active {
+	font-weight: bold;
+	color: rgba(31, 32, 65, 0.75);
+}
+
+.top-menu__item:first-of-type {
+	margin-left: 0px;
+}

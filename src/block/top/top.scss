@@ -1,0 +1,13 @@
+@import "../logo/logo";
+@import "../top/top-auth/top-auth";
+@import "../top/top-menu/top-menu";
+.top{
+	padding: 15px 140px;
+	display: flex;
+}
+.top__menu{
+	flex: auto;
+	display: flex;
+	justify-content:flex-end;
+	margin-right: 30px;
+}
