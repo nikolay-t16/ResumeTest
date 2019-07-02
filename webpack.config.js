@@ -21,14 +21,31 @@ const scss = {
 	use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
 };
 
+const font = {
+	test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+	loader: 'file-loader',
+	options: {
+		name: '[name].[ext]'
+	}
+};
+
+const img = {
+	test: /\.(png|jpg|gif|svg)$/,
+	loader: 'file-loader',
+	options: {
+		name: '[name].[ext]'
+	}
+};
+
+
 const config = {
 	entry: './src/index.js',
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].bundle.js'
+		path: path.resolve(__dirname, './dist'),
+		filename: '[name].js'
 	},
 	module: {
-		rules: [pug, js, scss]
+		rules: [pug, js, scss, font, img]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
