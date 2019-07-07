@@ -1,9 +1,9 @@
 - var menu = [{name:"test1",url:"#",selected:true},{name:"test2",url:"#",items:[{name:"test2_1",url:"#"},{name:"test2_2",url:"#"}]}];
 include top-menu/top-menu
 header.top
-    .top__logo
-        a(href="/")
-            include ../logo/logo
-    .top__menu
-        +top-menu(menu)
-    include top-auth/top-auth
+  .top__logo
+    a(href="/")
+      include ../logo/logo
+  .top__menu
+    +top-menu(menu)
+  include top-auth/top-auth
