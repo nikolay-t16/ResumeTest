@@ -1,5 +1,6 @@
+include templates/head
 doctype html
 html
-  include templates/head
+  +head({title:'index', page:'index', is_ui:false})
   body
     include block/top/top

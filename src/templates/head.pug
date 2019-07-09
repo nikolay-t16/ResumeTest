@@ -1,6 +1,12 @@
-head
-  meta(charset = 'utf-8')
-  meta(name='viewport', content="initial-scale=1.0, width=device-width")
-  title Webpack appm
-  link(rel="stylesheet" href="/assets/css/main.css")
-  link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+mixin head(options)
+  - var title = options.title ? options.title : 'title'
+  - var style = '/assets/css/' + (options.is_ui ? 'ui/':'' ) + options.page + '.css'
+  - var js = '/assets/js/' + (options.is_ui ? 'ui/':'' ) + options.page + '.js'
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content='initial-scale=1.0, width=device-width')
+    title
+      =title
+    link(rel='stylesheet' href=style)
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+    script(type='text/javascript', async='', src=js)

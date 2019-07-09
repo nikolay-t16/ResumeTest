@@ -1,2 +1,2 @@
-import "./top-auth.scss";
-import "../../buttons/button/button";
+import './top-auth.scss';
+import '../../buttons/button/button';

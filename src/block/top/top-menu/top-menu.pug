@@ -1,6 +1,6 @@
 mixin top-menu(items)
   ul.top-menu
     each item in items
-      li.top-menu__item(class=item.selected ? "top-menu__item_active" : "")= item.name
+      li.top-menu__item(class=item.selected ? 'top-menu__item_active': '')= item.name
       if item.items
         i.material-icons expand_more

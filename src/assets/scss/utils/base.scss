@@ -1,0 +1,12 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+
+body {
+  font-family: $mainFont;
+  font-style:  $mainFontStyle;
+  font-weight: $mainFontWeight;
+  height: 100%;
+}
+
+
