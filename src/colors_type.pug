@@ -1,0 +1,38 @@
+include templates/head
+- var colors = [
+- {label:'Dark Shade 100%',color_class:'background-dark-shade', color_code:'#1F2041' },
+- {label:'Dark Shade 75%',color_class:'background-dark-shade-75', color_code:'#1F2041' },
+- {label:'Dark Shade 50%',color_class:'background-dark-shade-50', color_code:'#1F2041' },
+- {label:'Dark Shade 25%',color_class:'background-dark-shade-25', color_code:'#1F2041' },
+- {label:'Dark Shade 5%',color_class:'background-dark-shade-5', color_code:'#1F2041' },
+- {label:'Purple',color_class:'background-button', color_code:'#BC9CFF' },
+- {label:'Green',color_class:'background-selected', color_code:'#6FCF97' }
+- ];
+- var types = [
+- {label:'H1', class:'widget-title', text:'This one is the sub-section or widget title' },
+- {label:'H2', class:'title-in-widget', text:'Next one is the item title inside widgets' },
+- {label:'H3', class:'cta-text', text:'This is a label or CTA text' },
+- {label:'Body', class:'dafult-text', text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.' }
+- ];
+doctype html
+html
+  +head({title:'colors_type', page:'colors_type'})
+  body
+    .colors-type
+      header.colors-type__header
+        include block/ui-header/ui-header
+      .colors-type__colors
+        each val in colors
+          .colors-type__colors-item
+            div(class=val.color_class + ' colors-type__colors-item-color')
+            .colors-type__colors-item-label
+              = val.label
+            .colors-type__colors-item-code
+              = val.color_code
+      .colors-type__types
+        each val in types
+          div(class=val.class + ' colors-type__types-item')
+            .colors-type__types-item-label.color-dark-shade-25
+              = val.label
+            .colors-type__types-item-text
+              = val.text

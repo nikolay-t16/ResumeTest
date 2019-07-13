@@ -1,7 +1,7 @@
 mixin head(options)
   - var title = options.title ? options.title : 'title'
-  - var style = '/assets/css/' + (options.is_ui ? 'ui/':'' ) + options.page + '.css'
-  - var js = '/assets/js/' + (options.is_ui ? 'ui/':'' ) + options.page + '.js'
+  - var style = '/assets/css/' + options.page + '.css'
+  - var js = '/assets/js/' + options.page + '.js'
   head
     meta(charset = 'utf-8')
     meta(name='viewport', content='initial-scale=1.0, width=device-width')

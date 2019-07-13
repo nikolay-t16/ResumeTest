@@ -1,5 +1,5 @@
 // Font
-$mainFont                : Montserrat;
+$mainFont                : 'Quicksand';
 
 // Size
 $mainFontWeight          : normal;
@@ -12,4 +12,12 @@ $phoneWidth              : 480px;
 $smPhoneWidth            : 320px;
 
 // Colors
-$default-color           : #ffffff;
+$darkShade               : #1F2041;
+$darkShade75             : rgba(31, 32, 65, 0.75);
+$darkShade50             : rgba(31, 32, 65, 0.50);
+$darkShade25             : rgba(31, 32, 65, 0.25);
+$darkShade5              : rgba(31, 32, 65, 0.05);
+$purple                  : #BC9CFF;
+$green                   : #6FCF97;
+$defaultColor            : $darkShade;
+

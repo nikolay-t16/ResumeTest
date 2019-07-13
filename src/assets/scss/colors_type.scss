@@ -1,0 +1,70 @@
+@import './utils/ui_base';
+
+.colors-type {
+  display: grid;
+  grid-template-rows: 140px 1fr;
+  grid-template-columns: 50% 50%;
+
+}
+
+.colors-type__header {
+  grid-column: 1/ span 2;
+}
+
+.colors-type__colors {
+  margin-left: 150px;
+  margin-top: 8px;
+}
+
+.colors-type__colors-item {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: 35px 35px;
+  grid-template-columns: 110px 1fr;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+.colors-type__colors-item-color {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  grid-row: 1/ 2;
+}
+
+.colors-type__colors-item-label {
+  grid-row: 1/ span 1;
+  grid-column: 2/span 1;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  padding-top: 7px;
+}
+
+.colors-type__colors-item-code {
+  grid-row: 2/ span 1;
+  grid-column: 2/span 1;
+  padding-top: 1px;
+}
+.colors-type__types{
+  padding-left: 127px;
+  padding-top: 8px;
+}
+
+.colors-type__types-item-label {
+  font-family: Montserrat;
+  font-weight: 400;
+  width: 36px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.colors-type__types-item {
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.colors-type__types-item-text {
+  width: 340px;
+}

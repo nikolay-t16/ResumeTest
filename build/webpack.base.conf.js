@@ -18,8 +18,6 @@ const PATHS = {
 const PAGES_DIR = PATHS.src
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
-const UI_PAGES_DIR = PATHS.src_ui
-const UI_PAGES = fs.readdirSync(UI_PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
   // BASE config
@@ -27,7 +25,8 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    index: './src/js/index.js'
+    index: './src/js/index.js',
+    colors_type: './src/js/colors_type.js',
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -87,12 +86,7 @@ module.exports = {
       }]
   },
   plugins: [
-    /*new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.pug',
-      inject: false
-    }),*/
-    new MiniCssExtractPlugin({
+   new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
     }),
     new CopyWebpackPlugin([
@@ -105,12 +99,8 @@ module.exports = {
     // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
     ...PAGES.map(page => new HtmlWebpackPlugin({
         template: `${PAGES_DIR}/${page}`,
-        filename: `./${page.replace('.pug', '.html')}`
-      })
-    ),
-    ...UI_PAGES.map(page => new HtmlWebpackPlugin({
-        template: `${UI_PAGES_DIR}/${page}`,
-        filename: `./ui/${page.replace('.pug', '.html')}`
+        filename: `./${page.replace('.pug', '.html')}`,
+        inject: false
       })
     )
   ],

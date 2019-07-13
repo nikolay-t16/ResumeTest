@@ -1,4 +1,5 @@
 @import 'vars';
+@import 'colors';
 @import 'fonts';
 @import 'reset';
 
@@ -6,7 +7,31 @@ body {
   font-family: $mainFont;
   font-style:  $mainFontStyle;
   font-weight: $mainFontWeight;
-  height: 100%;
+  color:       $defaultColor;
+  height:      100%;
 }
 
-
+.widget-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.title-in-widget {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+}
+.cta-text {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.dafult-text {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
