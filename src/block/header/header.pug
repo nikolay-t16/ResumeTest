@@ -1,0 +1,10 @@
+mixin header(options)
+  - var menu = options.menu ? options.menu : {}
+  include header-menu/header-menu
+  header.header
+    .header__logo
+      a(href='/')
+        include ../logo/logo
+    .header__menu
+      +header-menu(menu)
+    include header-auth/header-auth

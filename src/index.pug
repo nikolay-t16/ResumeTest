@@ -1,6 +1,8 @@
 include templates/head
+include block/header/header
+- var menu = [{name:'test1',url:'#',selected:true},{name:'test2',url:'#',items:[{name:'test2_1',url:'#'},{name:'test2_2',url:'#'}]}];
 doctype html
 html
-  +head({title:'index', page:'index'})
+  +head({title: 'index', page: 'index'})
   body
-    include block/top/top
+    +header({menu: menu})

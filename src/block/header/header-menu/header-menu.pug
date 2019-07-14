@@ -1,0 +1,6 @@
+mixin header-menu(items)
+  ul.header-menu
+    each item in items
+      li.header-menu__item(class=item.selected ? 'header-menu__item_active': '')= item.name
+      if item.items
+        i.material-icons expand_more
