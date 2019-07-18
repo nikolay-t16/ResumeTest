@@ -1,2 +1,2 @@
-import './header-auth.scss';
-import '../../buttons/button/button';
+import './header-auth.scss'
+import '../../buttons/button/button'

@@ -1,1 +1,1 @@
-import './ui-logo.scss';
+import './ui-logo.scss'

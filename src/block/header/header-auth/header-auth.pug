@@ -1,4 +1,13 @@
-include ../../buttons/button/button
-.header-auth
-  +button('Login')(class='header-auth__button button_empty')
-  +button('Register')
+mixin header-auth(options)
+  include ../../buttons/button/button
+  .header-auth
+    if(user)
+      .header-auth__user
+        include header-auth-user/header-auth-user
+        +header-auth-user(user)
+    else
+      .header-auth__btn
+        .header-auth__login
+          +button('Login')(class='header-auth__button button_empty')
+        .header-auth__register
+          +button('Register')

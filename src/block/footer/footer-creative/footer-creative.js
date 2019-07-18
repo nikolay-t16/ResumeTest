@@ -1,1 +1,1 @@
-import './footer-creative.scss';
+import './footer-creative.scss'

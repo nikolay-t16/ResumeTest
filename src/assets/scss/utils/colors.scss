@@ -1,22 +1,63 @@
 @import "vars";
-.background-dark-shade{
+
+.background-dark-shade {
   background-color: $darkShade;
 }
-.background-dark-shade-75{
+
+.background-dark-shade-75 {
   background-color: $darkShade75;
 }
-.background-dark-shade-50{
+
+.background-dark-shade-50 {
   background-color: $darkShade50;
 }
-.background-dark-shade-25{
+
+.background-dark-shade-25 {
   background-color: $darkShade25;
 }
-.background-dark-shade-5{
+
+.background-dark-shade-5 {
   background-color: $darkShade5;
 }
 
-.background-dark-shade{
-  background-color: $darkShade;
+.color-dark-shade {
+  color: $darkShade;
+}
+
+.color-dark-shade-75 {
+  color: $darkShade75;
+}
+
+.color-dark-shade-50 {
+  color: $darkShade50;
+}
+
+.color-dark-shade-25 {
+  color: $darkShade25;
+}
+
+.color-dark-shade-5 {
+  color: $darkShade5;
+}
+
+.box-shadow-dark-shade {
+  box-shadow: $darkShade;
+}
+
+.box-shadow-shade-75 {
+  box-shadow: $darkShade75;
+}
+
+.box-shadow-shade-50 {
+  box-shadow: $darkShade50;
+}
+
+.box-shadow-shade-25 {
+  box-shadow: $darkShade25;
+}
+
+.box-shadow-shade-5 {
+  box-shadow: $darkShade5;
 }
 
 .background-button {

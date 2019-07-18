@@ -1,3 +1,7 @@
-.header-auth__button:first-of-type {
+.header-auth {
+  display: flex;
+}
+
+.header-auth__login {
   margin-right: 20px;
 }

@@ -1,8 +1,10 @@
-@import './utils/ui_base';
+@import './utils/base';
 
 .colors-type {
+  width: 1440px;
+  margin: 0 auto;
   display: grid;
-  grid-template-rows: 140px 1fr;
+  grid-template-rows: 145px 1fr;
   grid-template-columns: 50% 50%;
 
 }
@@ -13,7 +15,6 @@
 
 .colors-type__colors {
   margin-left: 150px;
-  margin-top: 8px;
 }
 
 .colors-type__colors-item {
@@ -47,9 +48,9 @@
   grid-column: 2/span 1;
   padding-top: 1px;
 }
-.colors-type__types{
+
+.colors-type__types {
   padding-left: 127px;
-  padding-top: 8px;
 }
 
 .colors-type__types-item-label {

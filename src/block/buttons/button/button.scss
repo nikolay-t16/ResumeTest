@@ -3,7 +3,7 @@ $pGorizont: 10;
 $pVertical: 20;
 $border: 2;
 .button {
-  padding: $pGorizont + px $pVertical + px;
+  padding: ($pGorizont + 1) + px ($pVertical) + px ($pGorizont - 1) + px ($pVertical) + px;
   border-radius: 22px;
   font-weight: bold;
   font-size: 12px;
@@ -13,6 +13,7 @@ $border: 2;
   border: none;
   background: $background;
   width: min-content;
+  text-transform: uppercase;
 }
 
 .button:hover {
@@ -20,7 +21,7 @@ $border: 2;
 }
 
 .button_empty {
-  padding: ($pGorizont - 2) + px ($pVertical - 2) + px;
+  padding: ($pGorizont - 2) + px ($pVertical - 2) + px ($pGorizont - 3) + px;
   border-radius: 22px;
   border: none;
   background: $background;
@@ -28,19 +29,21 @@ $border: 2;
   color: #BC9CFF;
   background: white;
   position: relative;
+  transform-style: preserve-3d;
+  margin-top: 2px;
+  margin-right: 2px;
 }
 
 .button_empty:before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
   border-radius: inherit;
   background: $background;
+  transform: translateZ(-1px);
 }
 
 .button_empty:hover {
