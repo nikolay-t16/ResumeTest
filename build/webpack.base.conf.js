@@ -27,6 +27,7 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     colors_type: './src/js/colors_type.js',
+    headers_footers: './src/js/headers_footers.js'
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,

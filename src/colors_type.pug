@@ -12,7 +12,7 @@ include templates/head
 - {label:'H1', class:'widget-title', text:'This one is the sub-section or widget title' },
 - {label:'H2', class:'title-in-widget', text:'Next one is the item title inside widgets' },
 - {label:'H3', class:'cta-text', text:'This is a label or CTA text' },
-- {label:'Body', class:'dafult-text', text:'This is the body text which is used for most of the design, like paragraphs, lists, etc.' }
+- {label:'Body', class:'dafult-text', text:'This is the body text which is used for most <br/> of the design, like paragraphs, lists, etc.' }
 - ];
 doctype html
 html
@@ -34,5 +34,4 @@ html
           div(class=val.class + ' colors-type__types-item')
             .colors-type__types-item-label.color-dark-shade-25
               = val.label
-            .colors-type__types-item-text
-              = val.text
+            .colors-type__types-item-text !{val.text}
