@@ -1,0 +1,28 @@
+mixin footer-widgets(options)
+  .footer-widgets
+    .footer-widgets__widgets
+      .footer-widgets__widgets-logo
+        .footer-widgets__widgets-logo-img
+          include ../../logo/logo
+        .footer-widgets__widgets-logo-text
+          = options.logoText
+      each column in options.menuColumn
+        .footer-widgets__widgets-menu
+          .footer-widgets__widgets-menu-label.cta-text
+            a(href= column.label.url)
+              = column.label.text
+          .footer-widgets__widgets-menu-items
+            each item in column.items
+              .footer-widgets__widgets-menu-items-item
+                a(href= item.url)
+                  = item.text
+      .footer-widgets__widgets-subscribe
+        .footer-widgets__widgets-subscribe-label.cta-text
+          = options.subscribe.label
+        .footer-widgets__widgets-subscribe-text
+          = options.subscribe.text
+        .footer-widgets__widgets-subscribe-form
+    .footer-widgets__footer
+      .footer-widgets__footer-copyright
+      .footer-widgets__footer-social
+

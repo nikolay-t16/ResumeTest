@@ -1,10 +1,12 @@
 // Font
-$mainFont                : 'Quicksand';
-$widgetsFont             : 'Montserrat';
+$mainFont                : 'Montserrat';
+$widgetsTitleFont        : 'Quicksand';
 
 // Size
 $mainFontWeight          : normal;
 $mainFontStyle           : normal;
+$mainFontSyze            : 14px;
+$mainLineHeght           : 24px;
 
 $desktopWidth            : 1280px;
 $smDesktopWidth          : 980px;
@@ -20,5 +22,5 @@ $darkShade25             : rgba(31, 32, 65, 0.25);
 $darkShade5              : rgba(31, 32, 65, 0.05);
 $purple                  : #BC9CFF;
 $green                   : #6FCF97;
-$defaultColor            : $darkShade;
+$defaultColor            : $darkShade75;
 

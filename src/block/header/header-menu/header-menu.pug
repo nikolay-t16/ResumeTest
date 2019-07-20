@@ -3,4 +3,4 @@ mixin header-menu(items)
     each item in items
       li.header-menu__item(class=(item.selected ? 'header-menu__item_active': '') + (item.items ? ' header-menu_sub-items': ''))= item.name
         if item.items
-          i.material-icons expand_more
+          i.material-icons.header-menu__expand_more expand_more

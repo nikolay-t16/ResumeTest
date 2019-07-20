@@ -3,20 +3,20 @@
 .header-menu {
   display: flex;
   align-items: center;
-  font-family: $widgetsFont;
   font-size: 14px;
 }
 
 .header-menu__item {
-  margin-left: 28px;
+  margin-left: 29px;
+  color: rgba(31,32,65,.5);
+  letter-spacing: -0.09px;
   display: flex;
-  align-items: center;
-  color: rgba(31, 32, 65, 0.5);
 }
 
 .header-menu__item_active {
   font-weight: bold;
   color: rgba(31, 32, 65, 0.75);
+  letter-spacing: -0.12px;
 }
 
 .header-menu__item:first-of-type {
@@ -26,4 +26,8 @@
 
 .header-menu_sub-items {
   margin-right: -8px;
+}
+
+.header-menu__expand_more {
+  padding-top: 1px;
 }
