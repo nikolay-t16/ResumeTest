@@ -1,3 +1,4 @@
+include ../../forms/subscribe/subscribe
 mixin footer-widgets(options)
   .footer-widgets
     .footer-widgets__widgets
@@ -22,7 +23,11 @@ mixin footer-widgets(options)
         .footer-widgets__widgets-subscribe-text
           = options.subscribe.text
         .footer-widgets__widgets-subscribe-form
+          +subscribe({placeholder: 'Your email address'})
     .footer-widgets__footer
       .footer-widgets__footer-copyright
+        =options.copyright
       .footer-widgets__footer-social
+        include  ../footer-social/footer-social
+
 

@@ -1,0 +1,6 @@
+mixin subscribe(options)
+  - const placeholder = options.placeholder ? options.placeholder : ''
+  .subscribe.cta-text
+    input.subscribe__input(placeholder=placeholder)
+    button.subscribe__button
+      i.material-icons.subscribe__arrow-forward.color-button arrow_forward

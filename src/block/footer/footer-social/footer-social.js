@@ -1,0 +1,1 @@
+import './footer-social.scss'

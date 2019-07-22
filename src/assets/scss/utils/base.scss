@@ -6,37 +6,32 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import 'reset';
 
 body {
-  font-family: $mainFont;
-  font-style:  $mainFontStyle;
-  font-weight: $mainFontWeight;
-  font-size:   $mainFontSyze;
-  line-height: $mainLineHeght;
-  color:       $defaultColor;
-  height:      100%;
-  width:       100%;
+  font-family           : $mainFont;
+  font-style            : $mainFontStyle;
+  font-weight           : $mainFontWeight;
+  font-size             : $mainFontSyze;
+  line-height           : $mainLineHeght;
+  color                 : $defaultColor;
+  height                : 100%;
+  width                 : 100%;
 }
 
 .widget-title {
-  font-family: $widgetsTitleFont;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+  font-family           : $widgetsTitleFont;
+  font-weight           : bold;
+  font-size             : 24px;
+  line-height           : 30px;
 }
 .title-in-widget {
-  font-family: $widgetsTitleFont;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 24px;
+  font-family           : $widgetsTitleFont;
+  font-weight           : bold;
+  font-size             : 19px;
+  line-height           : 24px;
 }
 .cta-text {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-}
-.dafult-text {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+  font-weight           : bold;
+  font-size             : 12px;
+  line-height           : 15px;
+  text-transform        : uppercase;
+  color                 : $darkShade
 }

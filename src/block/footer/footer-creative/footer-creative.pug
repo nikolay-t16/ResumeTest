@@ -1,2 +1,9 @@
 mixin footer-creative(options)
   .footer-creative
+    .footer-creative__logo
+      include ../../logo/logo
+    .footer-creative__text
+      =options.text ? options.text : ''
+    .footer-creative__social
+      include ../footer-social/footer-social
+

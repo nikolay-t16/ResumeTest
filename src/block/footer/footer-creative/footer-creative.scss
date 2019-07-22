@@ -1,5 +1,20 @@
 .footer-creative {
-  background: white;
-  padding-top: 98px;
+  background     : white;
+  display        : flex;
+  flex-direction : column;
+  padding-top    : 100px;
+  padding-bottom : 112px;
 }
-
+.footer-creative__logo {
+  margin-bottom: 17px;
+}
+.footer-creative__logo, .footer-creative__social {
+  display         : flex;
+  justify-content : center;
+}
+.footer-creative__text {
+  align-self     : center;
+  width          : 535px;
+  text-align     : center;
+  padding-bottom : 29px;
+}
