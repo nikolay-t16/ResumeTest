@@ -1,9 +1,7 @@
 $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
-$pGorizont: 10;
-$pVertical: 20;
 $border: 2;
 .button {
-  padding: ($pGorizont + 1) + px ($pVertical) + px ($pGorizont - 1) + px ($pVertical) + px;
+  padding: 9px 20px 10px 19px;
   border-radius: 22px;
   font-weight: bold;
   font-size: 12px;
@@ -14,6 +12,7 @@ $border: 2;
   background: $background;
   width: min-content;
   text-transform: uppercase;
+
 }
 
 .button:hover {
@@ -21,7 +20,7 @@ $border: 2;
 }
 
 .button_empty {
-  padding: ($pGorizont - 2) + px ($pVertical - 2) + px ($pGorizont - 3) + px;
+  padding: 7px 19px 8px 18px;
   border-radius: 22px;
   border: none;
   background: $background;
@@ -30,8 +29,8 @@ $border: 2;
   background: white;
   position: relative;
   transform-style: preserve-3d;
+  letter-spacing: -.3px;
   margin-top: 2px;
-  margin-right: 2px;
 }
 
 .button_empty:before {
