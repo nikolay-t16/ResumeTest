@@ -21,12 +21,14 @@ body {
   font-weight           : bold;
   font-size             : 24px;
   line-height           : 30px;
+  color                 : $darkShade;
 }
 .title-in-widget {
   font-family           : $widgetsTitleFont;
   font-weight           : bold;
   font-size             : 19px;
   line-height           : 24px;
+  color                 : $darkShade;
 }
 .cta-text {
   font-weight           : bold;
