@@ -1,78 +1,77 @@
 @import '../../../assets/scss/utils/vars';
 
 .footer-widgets__widgets {
-  display        : flex;
-  padding-top    : 100px;
-  padding-left   : 140px;
-  padding-bottom : 83px;
-  background     : white;
+  display               : flex;
+  padding-top           : 100px;
+  padding-left          : 140px;
+  padding-bottom        : 79px;
+  background            : white;
 }
 
 .footer-widgets__widgets-logo {
-  width        : 240px;
-  margin-right : 60px;
+  width                 : 240px;
+  margin-right          : 60px;
 }
 
 .footer-widgets__widgets-logo-text {
-  padding-top    : 17px;
-  padding-left   : 0px;
-  letter-spacing : -.1px;
-  width          : 262px;
+  padding-top           : 17px;
+  padding-left          : 0px;
+  letter-spacing        : -.1px;
+  width                 : 262px;
 }
 
 .footer-widgets__widgets-menu {
-  width        : 100px;
-  margin-right : 100px;
-  margin-top   : 4px;
+  width                 : 100px;
+  margin-right          : 100px;
+  margin-top            : 4px;
 }
 
 .footer-widgets__widgets-menu-label {
-  margin-bottom: 22px;
+  margin-bottom         : 22px;
 }
 
 .footer-widgets__widgets-menu-items {
-  margin-left    : 1px;
-  letter-spacing : -.1px;
-  color          : $darkShade50;
+  letter-spacing        : -.1px;
+  color                 : $darkShade50;
 }
 
 .footer-widgets__widgets-menu-items-item {
-  line-height: 17px;
-  margin-bottom: 20px;
+  line-height           : 17px;
+  margin-bottom         : 21px;
 }
 
 .footer-widgets__widgets-subscribe {
-  margin-top: 4px;
+  margin-top            : 4px;
 }
 
 .footer-widgets__widgets-subscribe-label {
-  letter-spacing : -0.2px;
-  word-spacing   : -0.6px;
-  margin-bottom  : 18px;
+  letter-spacing        : -0.2px;
+  word-spacing          : -0.6px;
+  margin-bottom         : 18px;
 }
 
 .footer-widgets__widgets-subscribe-text {
-  width: 220px;
-  letter-spacing: -.2px;
-  word-spacing: .3px;
-  margin-bottom: 23px;
+  width                 : 220px;
+  letter-spacing        : -.2px;
+  word-spacing          : .3px;
+  margin-bottom         : 23px;
 }
 
 .footer-widgets__footer {
-  background: #fff;
-  padding: 23px 141px 23px 140px;
-  border-top: 1px solid #e5e5e5;
-  letter-spacing: -0.1px;
-  display: flex;
-  justify-content: space-between;
+  background            : #fff;
+  padding               : 23px 141px 23px 140px;
+  border-top            : 1px solid #e5e5e5;
+  letter-spacing        : -0.1px;
+  display               : flex;
+  justify-content       : space-between;
 }
 
 .footer-widgets__footer-copyright {
-  letter-spacing: -0.1px;
+  letter-spacing        : -0.1px;
 }
 
 .footer-widgets__footer-social {
-  display: flex;
-  align-items: center;
+  display               : flex;
+  align-items           : center;
 }
 
