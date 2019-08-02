@@ -1,54 +1,53 @@
 $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
-$border: 2;
 .button {
-  padding: 9px 20px 10px 19px;
-  border-radius: 22px;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  border: none;
-  background: $background;
-  width: min-content;
-  text-transform: uppercase;
-
+  padding               : 10px 21px 9px 19px;
+  border-radius         : 22px;
+  font-weight           : bold;
+  font-size             : 11.3px;
+  line-height           : 15px;
+  text-transform        : uppercase;
+  color                 : #FFFFFF;
+  border                : none;
+  background            : $background;
+  width                 : min-content;
+  text-transform        : uppercase;
+  letter-spacing        : 0.3px;
 }
 
 .button:hover {
-  opacity: 0.5;
+  opacity               : 0.5;
 }
 
 .button_empty {
-  padding: 7px 19px 8px 18px;
-  border-radius: 22px;
-  border: none;
-  background: $background;
-  width: min-content;
-  color: #BC9CFF;
-  background: white;
-  position: relative;
-  transform-style: preserve-3d;
-  letter-spacing: -.3px;
-  margin-top: 2px;
+  padding               : 8px 19px 7px 18.3px;;
+  border-radius         : 22px;
+  border                : none;
+  background            : $background;
+  width                 : min-content;
+  color                 : #BC9CFF;
+  background            : white;
+  position              : relative;
+  transform-style       : preserve-3d;
+  margin-top            : 2px;
+  letter-spacing        : 0;
 }
 
 .button_empty:before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  right: -2px;
-  bottom: -2px;
-  left: -2px;
-  border-radius: inherit;
-  background: $background;
-  transform: translateZ(-1px);
+  content               : '';
+  position              : absolute;
+  top                   : -2px;
+  right                 : -2px;
+  bottom                : -2px;
+  left                  : -2px;
+  border-radius         : inherit;
+  background            : $background;
+  transform             : translateZ(-1px);
 }
 
 .button_empty:hover {
-  opacity: 1;
+  opacity               : 1;
 }
 
 .button_empty:hover:before {
-  opacity: 0.5;
+  opacity               : 0.5;
 }
