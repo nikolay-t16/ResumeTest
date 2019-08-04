@@ -4,10 +4,11 @@ mixin header(options)
   include header-menu/header-menu
   include header-auth/header-auth
   header.header.box-shadow-shade-5
-    .header__logo
-      a(href='/')
-        include ../logo/logo
-    .header__menu
-      +header-menu(menu)
-    .header__auth
-      +header-auth({user: user})
+    .header__content
+      .header__logo
+        a(href='/')
+          include ../logo/logo
+      .header__menu
+        +header-menu(menu)
+      .header__auth
+        +header-auth({user: user})
