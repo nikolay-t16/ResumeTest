@@ -1,6 +1,6 @@
 mixin header-menu(items)
-  ul.header-menu
+  .header-menu
     each item in items
-      li.header-menu__item(class=(item.selected ? 'header-menu__item_active': '') + (item.items ? ' header-menu_sub-items': ''))= item.name
+      .header-menu__item(class=(item.selected ? 'header-menu__item_active': '') + (item.items ? ' header-menu_sub-items': ''))= item.name
         if item.items
           i.material-icons.header-menu__expand_more expand_more

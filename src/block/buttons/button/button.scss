@@ -3,7 +3,7 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
   padding               : 10px 21px 9px 19px;
   border-radius         : 22px;
   font-weight           : bold;
-  font-size             : 11.3px;
+  font-size             : 12px;
   line-height           : 15px;
   text-transform        : uppercase;
   color                 : #FFFFFF;
@@ -11,7 +11,10 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
   background            : $background;
   width                 : min-content;
   text-transform        : uppercase;
-  letter-spacing        : 0.3px;
+  letter-spacing        : -0.1px;
+}
+.button:focus{
+  outline: none;
 }
 
 .button:hover {
