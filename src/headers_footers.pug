@@ -40,8 +40,8 @@ include block/footer/footer-widgets/footer-widgets
 doctype html
 html
   +head({title: 'headers_footers', page: 'headers_footers'})
-  body
-    .headers-footers
+  body.headers-footers
+    .headers-footers__content
       header.headers-footers__header
         include block/ui-header/ui-header
       .headers-footers__headers
@@ -50,7 +50,7 @@ html
 
         .headers-footers__headers-item
           +header(headerUserOptions)
-      .headers-footers__footers
+      //.headers-footers__footers
         .headers-footers__headers-item
           +footer-widgets(footerWidgetsOptions)
         .headers-footers__headers-item

@@ -1,28 +1,41 @@
 @import '../../../assets/scss/utils/vars.scss';
 
 .header-menu {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
+  display               : flex;
+  align-items           : center;
+  font-size             : 14px;
+  @media only screen and (max-width: 780px) {
+    justify-content     : space-around;
+    width               : 100%;
+  }
 }
 
 .header-menu__item {
-  margin-left: 30px;
-  color: rgba(31,32,65,.5);
-  letter-spacing: -.2px;
-  display: flex;
+  margin-left           : 30px;
+  color                 : rgba(31,32,65,.5);
+  letter-spacing        : -.2px;
+  display               : flex;
+  @media only screen and (max-width: 940px) {
+    margin-left         : 15px;
+  }
+  @media only screen and (max-width: 780px) {
+    margin-left         : 0px;
+  }
 }
 
+.header-menu__item:first-of-type {
+  margin-left           : 0px;
+}
 .header-menu__item_active {
-  font-weight: bold;
-  color: rgba(31, 32, 65, 0.75);
-  letter-spacing: -0.12px;
+  font-weight           : bold;
+  color                 : rgba(31, 32, 65, 0.75);
+  letter-spacing        : -0.12px;
 }
 
 .header-menu_sub-items {
-  margin-right: -9px;
+  margin-right          : -9px;
 }
 
 .header-menu__expand_more {
-  padding-top: 1px;
+  padding-top           : 1px;
 }

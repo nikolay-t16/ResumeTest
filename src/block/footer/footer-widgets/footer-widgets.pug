@@ -10,12 +10,12 @@ mixin footer-widgets(options)
       each column in options.menuColumn
         .footer-widgets__widgets-menu
           .footer-widgets__widgets-menu-label.cta-text
-            a(href= column.label.url)
+            a.footer-widgets__a(href= column.label.url)
               = column.label.text
           .footer-widgets__widgets-menu-items
             each item in column.items
               .footer-widgets__widgets-menu-items-item
-                a(href= item.url)
+                a.footer-widgets__a(href= item.url)
                   = item.text
       .footer-widgets__widgets-subscribe
         .footer-widgets__widgets-subscribe-label.cta-text

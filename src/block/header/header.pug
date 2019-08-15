@@ -2,10 +2,13 @@ mixin header(options)
   - const menu = options.menu ? options.menu : {}
   - const user = options.user ? options.user : null
   include header-menu/header-menu
+  include header-menu-mobile/header-menu-mobile
   include header-auth/header-auth
   header.header.box-shadow-shade-5
     .header__content
       .header__logo
+        .header__menu-mobile
+          +header-menu-mobile(menu)
         a(href='/')
           include ../logo/logo
       .header__menu
