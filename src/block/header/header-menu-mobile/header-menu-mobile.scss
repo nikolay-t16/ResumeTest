@@ -1,7 +1,34 @@
+@import "../../../assets/scss/utils/vars";
 .header-menu-mobile {
+  display               : flex;
+  position              : relative;
+}
+
+.header-menu-mobile__icon {
+  font-size             : 30px;
+}
+
+.header-menu-mobile__menu {
+  background            : white;
+  width                 : 480px;
+  position              : absolute;
+  top                   : 35px;
+  left                  : -8px;
+  z-index               : 1;
+}
+
+.header-menu-mobile__menu-item {
+  border-top            : 1px groove $darkShade10;
+  padding               : 10px;
   display               : flex;
 }
 
-.header-menu-mobile {
-  font-size: 30px;
+.header-menu-mobile__menu-item:last-of-type {
+  border-bottom         : 1px groove $darkShade10;
+}
+
+.header-menu-mobile__item_active{
+  font-weight           : bold;
+  color                 : $darkShade75;
+  letter-spacing        : -0.12px;
 }

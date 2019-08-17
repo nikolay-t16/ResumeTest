@@ -1,3 +1,9 @@
-mixin header-menu-mobile(options)
+mixin header-menu-mobile(items)
   .header-menu-mobile
-    i.material-icons.header-menu-mobile.color-dark-shade-75 view_headline
+    i.material-icons.header-menu-mobile__icon.color-dark-shade-75 view_headline
+    .header-menu-mobile__menu
+      each item in items
+        .header-menu-mobile__menu-item(class=(item.selected ? 'header-menu-mobile__item_active' : '') + (item.items ? ' header-menu-mobile_sub-items' : ''))= item.name
+          if item.items
+            i.material-icons.header-menu__expand_more expand_more
+

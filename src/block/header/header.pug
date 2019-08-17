@@ -1,6 +1,7 @@
 mixin header(options)
-  - const menu = options.menu ? options.menu : {}
-  - const user = options.user ? options.user : null
+  -
+    const menu = options.menu ? options.menu : {}
+    const user = options.user ? options.user : null
   include header-menu/header-menu
   include header-menu-mobile/header-menu-mobile
   include header-auth/header-auth
