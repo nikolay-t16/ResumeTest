@@ -2,41 +2,42 @@ include templates/head
 include block/header/header
 include block/footer/footer-creative/footer-creative
 include block/footer/footer-widgets/footer-widgets
-- const menu = [
-- {name:'Home',url:'#',selected:true},
-- {name:'About Us',url:'#'},
-- {name:'Services',url:'#',items:[{name:'test2_1', url:'#'},{name:'Services',url:'#'}]},
-- {name:'Careers',url:'#'},
-- {name:'News',url:'#'},
-- {name:'Documentation',url:'#'}
-- ];
-- const user = {name: 'Cosmin Negoita'}
-- const headerOptions = {menu:menu}
-- const headerUserOptions = {menu:menu, user:user}
-- const footerCreativeOptions = {text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'}
-- const footerWidgetsOptions = {
-- logoText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
-- menuColumn : [
-- {
--   label : {url:'#', text:'Navigation'},
--   items : [{url:'#', text:'About Us'}, {url:'#', text:'News'}, {url:'#', text:'Support'}, {url:'#', text:'Products'}]
-- },
-- {
--   label : {url:'#', text:'About Us'},
--   items : [{url:'#', text:'Who we are'}, {url:'#', text:'Our team'}, {url:'#', text:'Careers'}, {url:'#', text:'Investors'}]
-- },
-- {
--   label : {url:'#', text:'Support'},
--   items : [{url:'#', text:'Documentation'}, {url:'#', text:'Community'}, {url:'#', text:'Get in Touch'}]
-- }
-- ],
-- subscribe : {
--   label : 'Subscribe to our newsletter',
--   placeholder : 'Your email address',
--   text : 'Receive our latest news and promotions in your inbox!'
-- },
-- copyright : 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
--}
+-
+  const menu = [
+  {name:'Home',url:'#',selected:true},
+  {name:'About Us',url:'#'},
+  {name:'Services',url:'#',items:[{name:'test2_1', url:'#'},{name:'test2_2',url:'#'}]},
+  {name:'Careers',url:'#'},
+  {name:'News',url:'#'},
+  {name:'Documentation',url:'#'}
+  ];
+  const user = {name: 'Cosmin Negoita'}
+  const headerOptions = {menu:menu}
+  const headerUserOptions = {menu:menu, user:user}
+  const footerCreativeOptions = {text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'}
+  const footerWidgetsOptions = {
+  logoText:'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+  menuColumn : [
+  {
+    label : {url:'#', text:'Navigation'},
+    items : [{url:'#', text:'About Us'}, {url:'#', text:'News'}, {url:'#', text:'Support'}, {url:'#', text:'Products'}]
+  },
+  {
+    label : {url:'#', text:'About Us'},
+    items : [{url:'#', text:'Who we are'}, {url:'#', text:'Our team'}, {url:'#', text:'Careers'}, {url:'#', text:'Investors'}]
+  },
+  {
+    label : {url:'#', text:'Support'},
+    items : [{url:'#', text:'Documentation'}, {url:'#', text:'Community'}, {url:'#', text:'Get in Touch'}]
+  }
+  ],
+  subscribe : {
+    label : 'Subscribe to our newsletter',
+    placeholder : 'Your email address',
+    text : 'Receive our latest news and promotions in your inbox!'
+  },
+  copyright : 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+  }
 doctype html
 html
   +head({title: 'headers_footers', page: 'headers_footers'})
