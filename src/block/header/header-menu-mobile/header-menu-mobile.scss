@@ -8,23 +8,25 @@
   font-size             : 30px;
 }
 
+.header-menu-mobile__menu, .header-menu-mobile__sub-menu {
+  height                : 0;
+  overflow              : hidden;
+  transition            : height 200ms;
+}
+
 .header-menu-mobile__menu {
   background            : white;
   width                 : 480px;
   position              : absolute;
-  top                   : 35px;
+  top                   : 40px;
   left                  : -8px;
   z-index               : 1;
 }
 
-.header-menu-mobile__menu-item {
+.header-menu-mobile__menu-item, .header-menu-mobile__sub-menu-item {
   border-top            : 1px groove $darkShade10;
   padding               : 10px;
   display               : flex;
-}
-
-.header-menu-mobile__menu-item:last-of-type {
-  border-bottom         : 1px groove $darkShade10;
 }
 
 .header-menu-mobile__item_active{
