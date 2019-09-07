@@ -46,13 +46,13 @@ html
       header.headers-footers__header
         include block/ui-header/ui-header
       .headers-footers__headers
-        .headers-footers__headers-item
+        .headers-footers__item
           +header(headerOptions)
 
-        .headers-footers__headers-item
+        .headers-footers__item
           +header(headerUserOptions)
-      //.headers-footers__footers
-        .headers-footers__headers-item
+      .headers-footers__footers
+        .headers-footers__item.headers-footers__item-widget
           +footer-widgets(footerWidgetsOptions)
-        .headers-footers__headers-item
+        .headers-footers__item
           +footer-creative(footerCreativeOptions)

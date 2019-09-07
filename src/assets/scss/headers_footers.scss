@@ -1,22 +1,28 @@
 @import './utils/base';
 
 .headers-footers {
-  background     : #F4F4F6;
-  margin         : 0;
+  background            : #F4F4F6;
+  margin                : 0;
 }
 
 .headers-footers__content {
-  max-width      : 1440px;
-  width          : 100%;
-  margin         : 0 auto;
-  display        : flex;
-  flex-direction : column;
+  max-width             : 1440px;
+  width                 : 100%;
+  margin                : 0 auto;
+  display               : flex;
+  flex-direction        : column;
 }
 
 .headers-footers__header {
-  margin-bottom  : 72px;
+  margin-bottom         : 72px;
 }
 
-.headers-footers__headers-item {
-  margin-bottom  : 40px;
+.headers-footers__item {
+  margin-bottom         : 40px;
+}
+
+.headers-footers__item-widget {
+  @media only screen and (max-width: 500px) {
+    display             : none;
+  }
 }

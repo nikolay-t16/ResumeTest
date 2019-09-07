@@ -4,7 +4,7 @@
 }
 
 .subscribe__input {
-  width                  : 226px;
+  width                  : 208px;
   height                 : 44px;
   background             : #FFFFFF;
   border                 : 1px solid $darkShade25;
@@ -14,7 +14,7 @@
   border-radius-topright : none;
   padding-left           : 14px;
   padding-right          : 14px;
-  padding-bottom         : 1px;
+  padding-bottom         : 2px;
 
 }
 .subscribe__input::placeholder {
@@ -32,10 +32,12 @@
   border-left            : none;
   box-sizing             : border-box;
   border-radius          : 0 4px 4px 0;
+  padding-left           : 19px;
+  padding-right          : 0px;
 }
 
 .subscribe__arrow-forward {
-  padding-right          : 9px;
+  padding-right          : 8px;
   padding-top            : 3px;
 }
 
