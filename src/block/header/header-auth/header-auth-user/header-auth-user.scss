@@ -1,4 +1,24 @@
 .header-auth-user {
-  align-self: center;
-  font-size: 14px;
+  align-self            : center;
+  font-size             : 14px;
+  @media only screen and (max-width: 480px) {
+    displar             : none;
+  }
+}
+
+.header-auth__user-name {
+  @media only screen and (max-width: 480px) {
+    display             : none;
+  }
+}
+
+.header-auth__user-mobile {
+  display               : none;
+  @media only screen and (max-width: 480px) {
+    display             : block;
+  }
+}
+
+.header-auth_user-mobile-user {
+  font-size             : 30px;
 }

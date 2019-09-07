@@ -1,11 +1,13 @@
 mixin head(options)
-  - var title = options.title ? options.title : 'title'
-  - var style = '/assets/css/' + options.page + '.css'
-  - var js = '/assets/js/' + options.page + '.js'
+  -
+    var title = options.title ? options.title : 'title'
+    var style = '/assets/css/' + options.page + '.css'
+    var js = '/assets/js/' + options.page + '.js'
   head
     meta(charset = 'utf-8')
     meta(name='viewport', content='initial-scale=1.0, width=device-width')
     title
       =title
     link(rel='stylesheet' href=style)
-    script(type='text/javascript', async='', src=js)
+    script(src='/assets/js/vendors.js' defer)
+    script(src=js defer)

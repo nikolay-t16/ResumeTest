@@ -1,0 +1,13 @@
+mixin header-menu-mobile(items)
+  .header-menu-mobile
+    i.material-icons.header-menu-mobile__icon.color-dark-shade-75 view_headline
+    .header-menu-mobile__menu
+      each item in items
+        .header-menu-mobile__menu-item(class=(item.selected ? 'header-menu-mobile__item_active' : '') + (item.items ? ' header-menu-mobile_sub-items' : ''))= item.name
+          if item.items
+            i.material-icons.header-menu-mobile__expand_more expand_more
+        if item.items
+          .header-menu-mobile__sub-menu
+            each sub_item in item.items
+              .header-menu-mobile__sub-menu-item(class=(sub_item.selected ? 'header-menu-mobile__item_active' : '') + (sub_item.items ? ' header-menu-mobile_sub-items' : ''))= sub_item.name
+
