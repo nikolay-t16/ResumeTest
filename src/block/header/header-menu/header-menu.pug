@@ -1,9 +1,10 @@
 mixin header-menu(items)
   .header-menu
     each item in items
-      .header-menu__item(class=(item.selected ? 'header-menu__item_active': '') + (item.items ? ' header-menu_sub-items': ''))= item.name
+      .header-menu__item(class=(item.selected ? 'header-menu__item_active': '') + (item.items ? ' header-menu_sub-items': ''))
+        a.header-menu__item-a(href=item.url)= item.name
         if item.items
           i.material-icons.header-menu__expand_more expand_more
           .header-menu__sub-menu
             each sub_item in item.items
-              .header-menu__sub-menu-item(class=(sub_item.selected ? 'header-menu__item_active' : '') + (sub_item.items ? ' header-menu_sub-items' : ''))= sub_item.name
+              a.header-menu__sub-menu-item(class=(sub_item.selected ? 'header-menu__item_active' : '') + (sub_item.items ? ' header-menu_sub-items' : '') href=sub_item.url)= sub_item.name
