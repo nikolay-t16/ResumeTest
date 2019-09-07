@@ -4,3 +4,6 @@ mixin header-menu(items)
       .header-menu__item(class=(item.selected ? 'header-menu__item_active': '') + (item.items ? ' header-menu_sub-items': ''))= item.name
         if item.items
           i.material-icons.header-menu__expand_more expand_more
+          .header-menu__sub-menu
+            each sub_item in item.items
+              .header-menu__sub-menu-item(class=(sub_item.selected ? 'header-menu__item_active' : '') + (sub_item.items ? ' header-menu_sub-items' : ''))= sub_item.name

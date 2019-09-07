@@ -34,8 +34,29 @@
 
 .header-menu_sub-items {
   margin-right          : -9px;
+  position              : relative;
 }
 
 .header-menu__expand_more {
   padding-top           : 1px;
+}
+
+.header-menu__sub-menu {
+  height                : 0;
+  min-width             : 100%;
+  overflow              : hidden;
+  transition            : height 200ms;
+  position              : absolute;
+  left                  : -10px;
+  top                   : 30px;
+  background            : white;
+  z-index               : 1;
+}
+.header-menu__sub-menu-item {
+  border-top            : 1px groove $darkShade10;
+  padding               : 10px;
+  display               : flex;
+}
+.header-menu__sub-menu-item:last-of-type {
+  border-bottom         : 1px groove $darkShade10;
 }
