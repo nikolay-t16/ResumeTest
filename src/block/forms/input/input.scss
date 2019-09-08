@@ -1,0 +1,22 @@
+@import '../../../assets/scss/utils/vars';
+
+.input {
+  width                  : 320px;
+  height                 : 44px;
+  background             : #FFFFFF;
+  border                 : 1px solid 1px solid $darkShade25;;
+  box-sizing             : border-box;
+  border-radius          : 4px;
+  padding-left           : 14px;
+  padding-right          : 14px;
+}
+
+.input::placeholder {
+  font-family            : $mainFont;
+  font-style             : $mainFontStyle;
+  font-weight            : $mainFontWeight;
+  font-size              : $mainFontSyze;
+  line-height            : $mainLineHeght;
+  color                  : $darkShade25;
+}
+

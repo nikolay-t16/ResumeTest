@@ -1,12 +1,27 @@
 include templates/head
 include block/header/header
+include block/forms/input/input
 doctype html
 html
   +head({title: 'form_elements', page: 'form_elements'})
-  body
-    .form-elements
-      .form-elements__column
-        .form-elements__input
-
-      .form-elements__column
-      .form-elements__column
+  body.form-elements
+      header.form-elements__header
+        include block/ui-header/ui-header
+      .form-elements__content
+        .form-elements__content-column
+          .form-elements__input
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text Text field
+              .form-elements__input-header-state Default
+            .form-elements__input-item
+              +input({placeholder:'Email'})
+          .form-elements__input
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text Text field
+              .form-elements__input-header-state Hover/focus
+            .form-elements__input-item
+              +input({placeholder:'This is pretty awesome'})
+        .form-elements__content-column
+        .form-elements__content-column
+        .form-elements__content-column
+        .form-elements__content-column
