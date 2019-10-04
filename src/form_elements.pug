@@ -1,6 +1,20 @@
 include templates/head
 include block/header/header
 include block/forms/input/input
+include block/forms/select/select
+-
+  selectOptions = {
+    data : [
+      {
+        value: '',
+        label: 'Сколько гостей'
+      },
+      {
+        value: '',
+        label: 'Сколько гостей'
+      },
+    ]
+  }
 doctype html
 html
   +head({title: 'form_elements', page: 'form_elements'})
@@ -21,6 +35,12 @@ html
               .form-elements__input-header-state Hover/focus
             .form-elements__input-item
               +input({placeholder:'This is pretty awesome'})
+          .form-elements__input
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text Dropdown
+              .form-elements__input-header-state Default
+            .form-elements__input-item
+              +select(selectOptions)
         .form-elements__content-column
         .form-elements__content-column
         .form-elements__content-column

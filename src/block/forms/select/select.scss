@@ -1,0 +1,18 @@
+@import '../../../assets/scss/utils/vars';
+
+.select {
+  width                  : 320px;
+  height                 : 44px;
+  background             : #FFFFFF;
+  border                 : 1px solid 1px solid $darkShade25;
+  box-sizing             : border-box;
+  border-radius          : 4px;
+  padding-left           : 14px;
+  padding-right          : 14px;
+  color                  : $darkShade25;
+  position: relative;
+}
+
+.select__item {
+  margin-top: 7px;
+}
