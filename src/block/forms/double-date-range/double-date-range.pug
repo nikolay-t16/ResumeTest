@@ -1,0 +1,17 @@
+mixin double-date-range(options={})
+    -
+        const first = options.first ? options.first : {}
+        const second = options.second ? options.second : {}
+    .double-date-range
+        .double-date-range__cell
+            .double-date-range__cell-label.cta-text
+              =first.label
+            .double-date-range__input-wraper
+              input.double-date-range__input.double-date-range_date-mask.input-text(placeholder=first.placeholder value=first.value)
+              i.material-icons.double-date-range__input-icon expand_more
+        .double-date-range__cell
+            .double-date-range__cell-label.cta-text
+              =first.label
+            .double-date-range__input-wraper
+              input.double-date-range__input.double-date-range_date-mask.input-text(placeholder=second.placeholder value=second.value)
+              i.material-icons.double-date-range__input-icon expand_more

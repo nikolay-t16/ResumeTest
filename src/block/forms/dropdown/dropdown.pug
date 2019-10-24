@@ -1,0 +1,29 @@
+mixin dropdown(header, firstOption, secondOption, thirdOption, placeholder)
+    .dropdown
+        .dropdown__label
+          .dropdown__label-text Сколько гостей
+          .dropdown__label-icon
+            i.material-icons expand_more
+            input(type="hidden" ).dropdown__input
+        .dropdown__items
+            .dropdown-option
+                .dropdown-option__first= firstOption
+                .dropdown-controller.dropdown-controller_first
+                    button.dropdown-controller__button.button-minus -
+                    .counter.first-counter 0
+                    button.dropdown-controller__button.button-plus +
+            .dropdown-option
+                .dropdown-option__second= secondOption
+                .dropdown-controller.dropdown-controller_second
+                    button.dropdown-controller__button.button-minus -
+                    .counter.second-counter 0
+                    button.dropdown-controller__button.button-plus +
+            .dropdown-option
+                .dropdown-option__third= thirdOption
+                .dropdown-controller.dropdown-controller_third
+                    button.dropdown-controller__button.button-minus -
+                    .counter.third-counter 0
+                    button.dropdown-controller__button.button-plus +
+            .dropdown-option
+                .dropdown-option__clear Очистить
+                .dropdown-option__confirm Применить

@@ -5,12 +5,7 @@ $material-icons-font-path: '~material-icons/iconfont/';
 @import 'fonts';
 
 body {
-  font-family           : $mainFont;
-  font-style            : $mainFontStyle;
-  font-weight           : $mainFontWeight;
-  font-size             : $mainFontSyze;
-  line-height           : $mainLineHeght;
-  color                 : $defaultColor;
+  @include defaultFont;
   height                : 100%;
   width                 : 100%;
 }
@@ -35,4 +30,16 @@ body {
   line-height           : 15px;
   text-transform        : uppercase;
   color                 : $darkShade
+}
+
+.state-text {
+  font-weight           : normal;
+  font-size             : 12px;
+  line-height           : 15px;
+  text-transform        : uppercase;
+  color                 : $defaultColor
+}
+
+.input-text {
+  @include defaultFont;
 }

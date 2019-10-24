@@ -1,8 +1,13 @@
 const path = require('path')
 const fs = require('fs')
+const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+function _path(p) {
+  return path.join(__dirname, p);
+}
 
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
@@ -69,8 +74,9 @@ module.exports = {
         options: {
           name: '[name].[ext]'
         }
-      }, {
-        test: /\.scss$/,
+      },
+      {
+        test: /\.(scss|css)$/,
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
@@ -85,7 +91,8 @@ module.exports = {
             options: {sourceMap: true}
           }
         ]
-      }]
+      },
+    ]
   },
   plugins: [
    new MiniCssExtractPlugin({
@@ -95,7 +102,11 @@ module.exports = {
       {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
       {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`}
     ]),
-
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
     // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best

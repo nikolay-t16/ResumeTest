@@ -1,0 +1,40 @@
+@import '../../../assets/scss/utils/vars';
+@import '../../../../node_modules/air-datepicker/dist/css/datepicker.css';
+
+.double-date-range {
+  display               : flex;
+  justify-content       : space-between;
+}
+
+.double-date-range__cell-label {
+  text-transform        : uppercase;
+  line-height           : 9px;
+  margin-bottom         : 8px;
+}
+
+.double-date-range__input-wraper {
+  position               : relative;
+  width                  : min-content;
+}
+
+.double-date-range__input {
+  width                  : $formSmElementWidth;
+  @include formElement
+}
+
+.double-date-range__input::placeholder {
+  @include formElementPlaceholder
+}
+
+.double-date-range__input:focus, .double-date-range__input:hover {
+  @include formElementFocus
+}
+
+.double-date-range__input-icon {
+  position               : absolute;
+  right                  : 0;
+  margin-top             : 10px;
+  margin-right           : 10px;
+}
+
+

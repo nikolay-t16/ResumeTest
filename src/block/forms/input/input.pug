@@ -2,5 +2,24 @@ mixin input(options={})
   -
     type = options.type ? options.type : 'text'
     placeholder = options.placeholder ? options.placeholder : ''
-  input.input(type=type placeholder=placeholder)
+    label = options.label ? options.label : ''
+    state = options.state ? options.state : ''
+    value = options.value ? options.value : ''
+    dateMask = options.dateMask ? options.dateMask : flase
+    inputClass = 'input__tag input-text'
+    midificatorFocus = options.midificatorFocus ? options.midificatorFocus : flase
+    if(dateMask)
+      inputClass = inputClass + ' input_mask-date'
+    if(midificatorFocus)
+      inputClass = inputClass + ' input_focus'
+  .input
+    if label || state
+      .input__header
+        if label
+          .cta-text
+            =label
+        if state
+          .state-text
+            =state
+    input(type=type placeholder=placeholder class=inputClass value=value)
 

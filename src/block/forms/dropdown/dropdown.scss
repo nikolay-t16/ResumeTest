@@ -1,0 +1,115 @@
+@import '../../../assets/scss/utils/vars';
+@import '../../../assets/scss/utils/colors';
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width                  : 320px;
+  height                 : 44px;
+  background             : #FFFFFF;
+  border                 : 1px solid 1px solid $darkShade25;
+  box-sizing             : border-box;
+  border-radius          : 4px;
+  padding-left           : 14px;
+  padding-right          : 9px;
+  color                  : $darkShade25;
+
+  &__label {
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    display              : none;
+  }
+
+  &-wrapper {
+    position: relative;
+
+    i {
+      display: block;
+      text-align: center;
+      line-height: 44px;
+      width: 44px;
+      height: 44px;
+      font-size: 24px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__input:focus {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__input-header {
+    font-family: 'Montserrat-Bold';
+    margin: 20px 0 5px 0;
+    text-align: left;
+  }
+
+  &-option {
+    font-family: 'Montserrat-Bold';
+    display: flex;
+    z-index: 999;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 5px 15px;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    .counter {
+      display: block;
+      width: 8px;
+      text-align: center;
+    }
+
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+    }
+
+    &__clear {
+      margin: 15px 0 10px 0;
+      color: bl;
+      cursor: pointer;
+    }
+
+    &__confirm {
+      margin: 15px 10px 10px 0;
+      color: $purple;
+      cursor: pointer;
+    }
+  }
+  &__focus, &:focus, &:hover {
+    @include formElementFocus
+  }
+}
+
+
+
+.dropdown-controller {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+
+  &__button {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 50%;
+    color: $darkShade50;
+    border: 1px solid $darkShade25;
+    background: transparent;
+    outline: none;
+  }
+
+}
+
+
