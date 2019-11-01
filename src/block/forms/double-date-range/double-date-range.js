@@ -3,7 +3,7 @@ import inputmask from "../../../../node_modules/inputmask/dist/inputmask/inputma
 import '../../../../node_modules/air-datepicker/dist/js/datepicker.js'
 import 'air-datepicker/dist/css/datepicker.min.css'
 $(function(){
-    $('input').datepicker();
+    $('.double-date-range__input').datepicker();
 });
 
 inputmask('99.99.9999').mask('.double-date-range_date-mask');

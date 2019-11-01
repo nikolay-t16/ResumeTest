@@ -1,43 +1,33 @@
 @import '../../../assets/scss/utils/vars';
 .subscribe {
   display: flex;
+  position: relative;
+  width: max-content;
+
+  &__input {
+  @include formElement($formMdElementWidth)
 }
 
-.subscribe__input {
-  width                  : 208px;
-  height                 : 44px;
-  background             : #FFFFFF;
-  border                 : 1px solid $darkShade25;
-  border-right           : none;
-  box-sizing             : border-box;
-  border-radius          : 4px 0 0 4px;
-  border-radius-topright : none;
-  padding-left           : 14px;
-  padding-right          : 14px;
-  padding-bottom         : 2px;
-
-}
-.subscribe__input::placeholder {
-  font-family            : $mainFont;
-  font-style             : $mainFontStyle;
-  font-weight            : $mainFontWeight;
-  font-size              : $mainFontSyze;
-  line-height            : $mainLineHeght;
-  color                  : $darkShade25;
+&__input::placeholder {
+  @include formElementPlaceholder
 }
 
-.subscribe__button {
+&__input:focus, &__input:hover {
+  @include formElementFocus
+}
+
+&__button {
   background             : none;
-  border                 : 1px solid $darkShade25;
-  border-left            : none;
+  border: none;
   box-sizing             : border-box;
-  border-radius          : 0 4px 4px 0;
-  padding-left           : 19px;
   padding-right          : 0px;
+  position: absolute;
+  right: 0px;
 }
 
-.subscribe__arrow-forward {
+&__arrow-forward {
   padding-right          : 8px;
   padding-top            : 3px;
 }
 
+}

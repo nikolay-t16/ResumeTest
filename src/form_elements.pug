@@ -4,6 +4,7 @@ include block/forms/input/input
 include block/forms/select/select
 include block/forms/dropdown/dropdown
 include block/forms/double-date-range/double-date-range
+include block/forms/subscribe/subscribe
 -
   const selectOptions = {
     data : [
@@ -55,6 +56,11 @@ html
               +input({placeholder: 'ДД.ММ.ГГГГ', dateMask: true})
           .form-elements__input-double-date-range
             +double-date-range(doubleDateRange)
+          .form-elements__input
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text subscription text field
+            .form-elements__input-item
+              +subscribe({placeholder: 'Email'})
         .form-elements__content-column
         .form-elements__content-column
         .form-elements__content-column

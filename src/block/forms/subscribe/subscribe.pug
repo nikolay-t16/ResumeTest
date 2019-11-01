@@ -1,4 +1,4 @@
-mixin subscribe(options)
+mixin subscribe(options = {})
   - const placeholder = options.placeholder ? options.placeholder : ''
   .subscribe.cta-text
     input.subscribe__input.input-text(placeholder=placeholder)

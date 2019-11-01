@@ -4,3 +4,4 @@ import '../block/forms/input/input.js';
 import '../block/forms/select/select.js';
 import '../block/forms/dropdown/dropdown.js';
 import '../block/forms/double-date-range/double-date-range.js';
+import '../block/forms/subscribe/subscribe.js';

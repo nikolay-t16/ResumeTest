@@ -1,8 +1,19 @@
 @import '../../../assets/scss/utils/vars';
 
 .input__tag {
-  width                  : $formDefaultElementWidth;
-  @include formElement
+  @include formElement($formBigElementWidth)
+}
+
+.input_width_sm {
+  width                 : $formSmElementWidth;
+}
+
+.input_width_md {
+  width                 : $formMdElementWidth;
+}
+
+.input_width_bg {
+  width                 : $formSmElementWidth;
 }
 
 .input__tag:focus, .input__tag:hover, .input_focus {
