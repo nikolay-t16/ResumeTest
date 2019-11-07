@@ -2,57 +2,57 @@
 @import './utils/vars';
 
 .form-elements {
-  background            : #FFFFFF;
-  margin                : 0;
-}
+  background: #FFFFFF;
+  margin: 0;
 
-.form-elements__header {
-  margin-bottom         : 65px;
-}
+  &__header {
+    margin-bottom: 65px;
+  }
 
-.form-elements__content {
-  width                 : 1440px;
-  margin                : 0 auto;
-  padding-left          : 59px;
-  display               : grid;
-  grid-template-rows    : 1fr;
-  grid-template-columns : 320px 126px 1fr 126px 1fr;
-}
+  &__content {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 59px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 320px 126px 1fr 126px 1fr;
+  }
 
-.form-elements__content-column {
-  display               : flex;
-  flex-direction        : column;
-}
+  &__content-column {
+    display: flex;
+    flex-direction: column;
+  }
 
-.form-elements__input {
-  width                 : $formBigElementWidth;
-  margin-bottom         : 21px;
-}
+  &__input {
+    width: $formBigElementWidth;
+    margin-bottom: 21px;
+  }
 
-.form-elements__input-double-date-range{
-  width                 : $formBigElementWidth;
-  margin-top            : 23px;
-  margin-bottom         : 21px;
-}
+  &__input-double-date-range {
+    width: $formBigElementWidth;
+    margin-top: 23px;
+    margin-bottom: 21px;
+  }
 
-.form-elements__input-datepicker-range {
-  width                 : $formMdElementWidth;
-  margin-top            : 19px;
-  margin-bottom         : 41px;
-}
+  &__input-datepicker-range {
+    width: $formMdElementWidth;
+    margin-top: 19px;
+    margin-bottom: 41px;
+  }
 
-.form-elements__input-header {
-  display               : flex;
-  justify-content       : space-between;
-  margin-bottom         : 5px;
-}
+  &__input-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
 
-.form-elements__input-header-state {
-  text-transform        : uppercase;
-  font-size             : 12px;
-  line-height           : 9px;
-}
+  &__input-header-state {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 9px;
+  }
 
-.form-elements__input-item-subscribe {
-  width: $formMdElementWidth;
+  &__input-item-subscribe {
+    width: $formMdElementWidth;
+  }
 }

@@ -1,8 +1,11 @@
-mixin head(options)
+mixin head(options = {})
   -
-    var title = options.title ? options.title : 'title'
-    var style = '/assets/css/' + options.page + '.css'
-    var js = '/assets/js/' + options.page + '.js'
+    const {
+      title = '',
+      page = 'index',
+    } = options;
+    const style = `/assets/css/${page}.css`;
+    const js = `/assets/js/${page}.js`;
   head
     meta(charset = 'utf-8')
     meta(name='viewport', content='initial-scale=1.0, width=device-width')

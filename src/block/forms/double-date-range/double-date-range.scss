@@ -1,30 +1,30 @@
 @import '../../../assets/scss/utils/vars';
 
 .double-date-range {
-  display               : flex;
-  justify-content       : space-between;
-}
+  display: flex;
+  justify-content: space-between;
 
-.double-date-range__cell-label {
-  text-transform        : uppercase;
-  line-height           : 9px;
-  margin-bottom         : 8px;
-}
+  &__cell-label {
+    text-transform: uppercase;
+    line-height: 9px;
+    margin-bottom: 8px;
+  }
 
-.double-date-range__input-wraper {
-  position               : relative;
-  width                  : $formSmElementWidth;
-}
+  &__input-wraper {
+    position: relative;
+    width: $formSmElementWidth;
+  }
 
-.double-date-range__input {
-  width                  : $formSmElementWidth;
-  @include formElement
-}
+  &__input {
+    width: $formSmElementWidth;
+    @include formElement
+  }
 
-.double-date-range__input::placeholder {
-  @include formElementPlaceholder
-}
+  &__input::placeholder {
+    @include formElementPlaceholder
+  }
 
-.double-date-range__input:focus, .double-date-range__input:hover {
-  @include formElementFocus
+  &__input:focus, &__input:hover {
+    @include formElementFocus
+  }
 }

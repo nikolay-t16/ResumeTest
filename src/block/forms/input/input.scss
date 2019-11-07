@@ -1,54 +1,55 @@
 @import '../../../assets/scss/utils/vars';
+
 .input {
   position: relative;
-}
 
-.input__tag {
-  @include formElement
-}
+  &__tag {
+    @include formElement
+  }
 
-.input_width_sm {
-  width                 : $formSmElementWidth;
-}
+  .input_width_sm {
+    width: $formSmElementWidth;
+  }
 
-.input_width_md {
-  width                 : $formMdElementWidth;
-}
+  .input_width_md {
+    width: $formMdElementWidth;
+  }
 
-.input_width_bg {
-  width                 : $formSmElementWidth;
-}
+  .input_width_bg {
+    width: $formSmElementWidth;
+  }
 
-.input__tag:focus, .input__tag:hover, .input_focus {
-  @include formElementFocus
-}
+  &__tag:focus, &__tag:hover, .input_focus {
+    @include formElementFocus
+  }
 
-.input__header {
-  display               : flex;
-  justify-content       : space-between;
-  margin-bottom         : 5px;
-}
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
 
-.input__header-state{
-  text-transform: uppercase;
-  font-size: 12px;
-  line-height: 9px;
-}
+  &__header-state {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 9px;
+  }
 
-.input__tag::placeholder {
-  @include formElementPlaceholder
-}
+  &__tag::placeholder {
+    @include formElementPlaceholder
+  }
 
-.input__expand-more {
-  position               : absolute;
-  right                  : 0;
-  margin-top             : 10px;
-  margin-right           : 10px;
-}
+  &__expand-more {
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 
-.input__arrow-forward {
-  position               : absolute;
-  right                  : 0;
-  margin-top             : 10px;
-  margin-right           : 10px;
+  &__arrow-forward {
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
 }

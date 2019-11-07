@@ -1,8 +1,7 @@
 include ../input/input
-mixin double-date-range(options={})
+mixin double-date-range(options = {})
     -
-        const first = options.first ? options.first : {}
-        const second = options.second ? options.second : {}
+      const {first = {}, second = {}} = options;
     .double-date-range
         .double-date-range__cell
             .double-date-range__cell-label.cta-text

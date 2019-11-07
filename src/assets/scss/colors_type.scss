@@ -8,71 +8,70 @@
   grid-template-rows: 145px 1fr;
   grid-template-columns: 50% 50%;
 
-}
+  &__header {
+    grid-column: 1/ span 2;
+  }
 
-.colors-type__header {
-  grid-column: 1/ span 2;
-}
+  &__colors {
+    margin-left: 150px;
+  }
 
-.colors-type__colors {
-  margin-left: 150px;
-}
+  &__colors-item {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-rows: 35px 35px;
+    grid-template-columns: 110px 1fr;
+    font-size: 19px;
+    line-height: 29px;
+  }
 
-.colors-type__colors-item {
-  margin-bottom: 20px;
-  display: grid;
-  grid-template-rows: 35px 35px;
-  grid-template-columns: 110px 1fr;
-  font-size: 19px;
-  line-height: 29px;
-}
+  &__colors-item-color {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    grid-row: 1/ 2;
+  }
 
-.colors-type__colors-item-color {
-  width: 70px;
-  height: 70px;
-  border-radius: 6px;
-  grid-row: 1/ 2;
-}
+  &__colors-item-label, &__colors-item-code, &__types-item-label {
+    font-family: $widgetsTitleFont;
+  }
+  &__types-item-label {
+    font-family: $mainFont;
+  }
 
-.colors-type__colors-item-label, .colors-type__colors-item-code, .colors-type__types-item-label {
-  font-family: $widgetsTitleFont;
-}
-.colors-type__types-item-label {
-  font-family: $mainFont;
-}
+  &__colors-item-label {
+    grid-row: 1/ span 1;
+    grid-column: 2/span 1;
+    font-weight: bold;
 
-.colors-type__colors-item-label {
-  grid-row: 1/ span 1;
-  grid-column: 2/span 1;
-  font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+  }
 
-  display: flex;
-  align-items: center;
-  padding-top: 7px;
-}
+  &__colors-item-code {
+    grid-row: 2/ span 1;
+    grid-column: 2/span 1;
+    padding-top: 1px;
+  }
 
-.colors-type__colors-item-code {
-  grid-row: 2/ span 1;
-  grid-column: 2/span 1;
-  padding-top: 1px;
-}
+  &__types {
+    padding-left: 127px;
+  }
 
-.colors-type__types {
-  padding-left: 127px;
-}
+  &__types-item-label {
+    font-weight: 400;
+    width: 36px;
+    text-align: right;
+    margin-right: 30px;
+  }
 
-.colors-type__types-item-label {
-  font-weight: 400;
-  width: 36px;
-  text-align: right;
-  margin-right: 30px;
-}
+  &__types-item {
+    display: flex;
+    padding-bottom: 50px;
+  }
 
-.colors-type__types-item {
-  display: flex;
-  padding-bottom: 50px;
-}
-
-.colors-type__types-item-text {
-  width: 340px;
+  &__types-item-text {
+    width: 340px;
+  }
 }

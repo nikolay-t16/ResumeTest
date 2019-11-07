@@ -1,17 +1,19 @@
-mixin input(options={})
+mixin input(options = {})
   -
-    const type = options.type ? options.type : 'text';
-    const placeholder = options.placeholder ? options.placeholder : '';
-    const label = options.label ? options.label : '';
-    const state = options.state ? options.state : '';
-    const value = options.value ? options.value : '';
-    const dateMask = options.dateMask ? options.dateMask : false;
-    const expandMoreArrow = options.expandMoreArrow ? options.expandMoreArrow : false;
-    const forwardArrow = options.forwardArrow ? options.forwardArrow : false;
+    const {
+      type = 'text',
+      placeholder = '',
+      label = '',
+      state = '',
+      value = '',
+      dateMask = false,
+      expandMoreArrow = false,
+      forwardArrow = false,
+      modificatorFocus = false,
+      datepicker = false,
+      datepickerRange = false,
+    } = options;
     let inputClass = 'input__tag input-text';
-    const modificatorFocus = options.modificatorFocus ? options.modificatorFocus : false;
-    const datepicker = options.datepicker ? options.datepicker : false;
-    const datepickerRange = options.datepickerRange ? options.datepickerRange : false;
     if(dateMask)
       inputClass = inputClass + ' input_mask-date'
     if(datepicker)

@@ -1,13 +1,20 @@
 include ../../forms/input/input
-mixin footer-widgets(options)
+mixin footer-widgets(options = {})
+  -
+    const {
+      logoText = '',
+      menuColumn = [],
+      subscribe = {label: '', text: ''},
+      copyright = '',
+      } = options;
   .footer-widgets.box-shadow-shade-5
     .footer-widgets__widgets
       .footer-widgets__widgets-logo
         .footer-widgets__widgets-logo-img
           include ../../logo/logo
         .footer-widgets__widgets-logo-text
-          = options.logoText
-      each column in options.menuColumn
+          = logoText
+      each column in menuColumn
         .footer-widgets__widgets-menu
           .footer-widgets__widgets-menu-label.cta-text
             a.footer-widgets__a(href= column.label.url)
@@ -19,14 +26,14 @@ mixin footer-widgets(options)
                   = item.text
       .footer-widgets__widgets-subscribe
         .footer-widgets__widgets-subscribe-label.cta-text
-          = options.subscribe.label
+          = subscribe.label
         .footer-widgets__widgets-subscribe-text
-          = options.subscribe.text
+          = subscribe.text
         .footer-widgets__widgets-subscribe-form
           +input({placeholder: 'Your email address', datepickerRange: true})
     .footer-widgets__footer
       .footer-widgets__footer-copyright
-        =options.copyright
+        =copyright
       .footer-widgets__footer-social
         include  ../footer-social/footer-social
 

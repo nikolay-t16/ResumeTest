@@ -1,4 +1,6 @@
-mixin header-menu(items)
+mixin header-menu(options = {})
+  -
+    const {items = []} = options;
   .header-menu
     each item in items
       .header-menu__item(class=(item.selected ? 'header-menu__item_active': '') + (item.items ? ' header-menu_sub-items': ''))

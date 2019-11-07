@@ -1,9 +1,11 @@
-mixin footer-creative(options)
+mixin footer-creative(options = {})
+  -
+    const {text = ''} = options;
   .footer-creative.box-shadow-shade-5
     .footer-creative__logo
       include ../../logo/logo
     .footer-creative__text
-      =options.text ? options.text : ''
+      =text
     .footer-creative__social
       include ../footer-social/footer-social
 

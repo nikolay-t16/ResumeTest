@@ -1,4 +1,6 @@
-mixin header-menu-mobile(items)
+mixin header-menu-mobile(options = {})
+  -
+    const {items = []} = options;
   .header-menu-mobile
     i.material-icons.header-menu-mobile__icon.color-dark-shade-75 view_headline
     .header-menu-mobile__menu

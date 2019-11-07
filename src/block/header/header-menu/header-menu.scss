@@ -1,69 +1,69 @@
 @import '../../../assets/scss/utils/vars.scss';
 
 .header-menu {
-  display               : flex;
-  align-items           : center;
-  font-size             : 14px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
   @media only screen and (max-width: 780px) {
-    justify-content     : space-around;
-    width               : 100%;
+    justify-content: space-around;
+    width: 100%;
   }
-}
 
-.header-menu__item {
-  margin-left           : 30px;
-  color                 : $darkShade50;
-  letter-spacing        : -.2px;
-  display               : flex;
-  @media only screen and (max-width: 940px) {
-    margin-left         : 15px;
+  &__item {
+    margin-left: 30px;
+    color: $darkShade50;
+    letter-spacing: -.2px;
+    display: flex;
+    @media only screen and (max-width: 940px) {
+      margin-left: 15px;
+    }
+    @media only screen and (max-width: 780px) {
+      margin-left: 0px;
+    }
   }
-  @media only screen and (max-width: 780px) {
-    margin-left         : 0px;
+
+  &__item-a {
+    color: inherit;
+    text-decoration: none;
   }
-}
 
-.header-menu__item-a {
-  color                 : inherit;
-  text-decoration       : none;
-}
+  &__item:first-of-type {
+    margin-left: 0px;
+  }
+  &__item_active {
+    font-weight: bold;
+    color: $darkShade75;
+    letter-spacing: -0.12px;
+  }
 
-.header-menu__item:first-of-type {
-  margin-left           : 0px;
-}
-.header-menu__item_active {
-  font-weight           : bold;
-  color                 : $darkShade75;
-  letter-spacing        : -0.12px;
-}
+  .header-menu_sub-items {
+    margin-right: -9px;
+    position: relative;
+  }
 
-.header-menu_sub-items {
-  margin-right          : -9px;
-  position              : relative;
-}
+  &__expand_more {
+    padding-top: 1px;
+    cursor: pointer;
+  }
 
-.header-menu__expand_more {
-  padding-top           : 1px;
-  cursor                : pointer;
-}
-
-.header-menu__sub-menu {
-  height                : 0;
-  min-width             : 100%;
-  overflow              : hidden;
-  transition            : height 200ms;
-  position              : absolute;
-  left                  : -10px;
-  top                   : 30px;
-  background            : white;
-  z-index               : 1;
-}
-.header-menu__sub-menu-item {
-  border-top            : 1px groove $darkShade10;
-  padding               : 10px;
-  display               : flex;
-  color                 : inherit;
-}
-.header-menu__sub-menu-item:last-of-type {
-  border-bottom         : 1px groove $darkShade10;
+  &__sub-menu {
+    height: 0;
+    min-width: 100%;
+    overflow: hidden;
+    transition: height 200ms;
+    position: absolute;
+    left: -10px;
+    top: 30px;
+    background: white;
+    z-index: 1;
+  }
+  &__sub-menu-item {
+    border-top: 1px groove $darkShade10;
+    padding: 10px;
+    display: flex;
+    color: inherit;
+  }
+  &__sub-menu-item:last-of-type {
+    border-bottom: 1px groove $darkShade10;
+  }
 }
