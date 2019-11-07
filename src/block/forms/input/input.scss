@@ -1,7 +1,10 @@
 @import '../../../assets/scss/utils/vars';
+.input {
+  position: relative;
+}
 
 .input__tag {
-  @include formElement($formBigElementWidth)
+  @include formElement
 }
 
 .input_width_sm {
@@ -36,3 +39,16 @@
   @include formElementPlaceholder
 }
 
+.input__expand-more {
+  position               : absolute;
+  right                  : 0;
+  margin-top             : 10px;
+  margin-right           : 10px;
+}
+
+.input__arrow-forward {
+  position               : absolute;
+  right                  : 0;
+  margin-top             : 10px;
+  margin-right           : 10px;
+}

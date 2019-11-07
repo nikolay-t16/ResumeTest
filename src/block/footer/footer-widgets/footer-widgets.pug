@@ -1,4 +1,4 @@
-include ../../forms/subscribe/subscribe
+include ../../forms/input/input
 mixin footer-widgets(options)
   .footer-widgets.box-shadow-shade-5
     .footer-widgets__widgets
@@ -23,7 +23,7 @@ mixin footer-widgets(options)
         .footer-widgets__widgets-subscribe-text
           = options.subscribe.text
         .footer-widgets__widgets-subscribe-form
-          +subscribe({placeholder: 'Your email address'})
+          +input({placeholder: 'Your email address', datepickerRange: true})
     .footer-widgets__footer
       .footer-widgets__footer-copyright
         =options.copyright

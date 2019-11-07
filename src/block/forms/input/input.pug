@@ -1,16 +1,26 @@
 mixin input(options={})
   -
-    type = options.type ? options.type : 'text'
-    placeholder = options.placeholder ? options.placeholder : ''
-    label = options.label ? options.label : ''
-    state = options.state ? options.state : ''
-    value = options.value ? options.value : ''
-    dateMask = options.dateMask ? options.dateMask : flase
-    inputClass = 'input__tag input-text'
-    midificatorFocus = options.midificatorFocus ? options.midificatorFocus : flase
+    const type = options.type ? options.type : 'text';
+    const placeholder = options.placeholder ? options.placeholder : '';
+    const label = options.label ? options.label : '';
+    const state = options.state ? options.state : '';
+    const value = options.value ? options.value : '';
+    const dateMask = options.dateMask ? options.dateMask : false;
+    const expandMoreArrow = options.expandMoreArrow ? options.expandMoreArrow : false;
+    const forwardArrow = options.forwardArrow ? options.forwardArrow : false;
+    let inputClass = 'input__tag input-text';
+    const modificatorFocus = options.modificatorFocus ? options.modificatorFocus : false;
+    const datepicker = options.datepicker ? options.datepicker : false;
+    const datepickerRange = options.datepickerRange ? options.datepickerRange : false;
     if(dateMask)
       inputClass = inputClass + ' input_mask-date'
-    if(midificatorFocus)
+    if(datepicker)
+      inputClass = inputClass + ' input_datepicker'
+    if(datepickerRange)
+      inputClass = inputClass + ' input_datepicker-range'
+    if(dateMask)
+      inputClass = inputClass + ' input_mask-date'
+    if(modificatorFocus)
       inputClass = inputClass + ' input_focus'
   .input
     if label || state
@@ -22,4 +32,8 @@ mixin input(options={})
           .state-text
             =state
     input(type=type placeholder=placeholder class=inputClass value=value)
+    if expandMoreArrow
+      i.material-icons.input__expand-more expand_more
+    if forwardArrow
+      i.material-icons.input__arrow-forward.color-button arrow_forward
 

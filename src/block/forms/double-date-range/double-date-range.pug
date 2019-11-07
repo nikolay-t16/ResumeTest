@@ -1,3 +1,4 @@
+include ../input/input
 mixin double-date-range(options={})
     -
         const first = options.first ? options.first : {}
@@ -7,11 +8,9 @@ mixin double-date-range(options={})
             .double-date-range__cell-label.cta-text
               =first.label
             .double-date-range__input-wraper
-              input.double-date-range__input.double-date-range_date-mask.input-text(placeholder=first.placeholder value=first.value)
-              i.material-icons.double-date-range__input-icon expand_more
+              +input({dateMask:true, expandMoreArrow: true, placeholder:first.placeholder, value:first.value, datepicker: true})
         .double-date-range__cell
             .double-date-range__cell-label.cta-text
               =first.label
             .double-date-range__input-wraper
-              input.double-date-range__input.double-date-range_date-mask.input-text(placeholder=second.placeholder value=second.value)
-              i.material-icons.double-date-range__input-icon expand_more
+              +input({dateMask:true, expandMoreArrow: true, placeholder:second.placeholder, value:second.value, datepicker: true})

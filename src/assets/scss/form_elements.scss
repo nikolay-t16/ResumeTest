@@ -1,4 +1,5 @@
 @import './utils/base';
+@import './utils/vars';
 
 .form-elements {
   background            : #FFFFFF;
@@ -24,14 +25,20 @@
 }
 
 .form-elements__input {
-  width                 : 320px;
+  width                 : $formBigElementWidth;
   margin-bottom         : 21px;
 }
 
 .form-elements__input-double-date-range{
-  width                 : 320px;
+  width                 : $formBigElementWidth;
   margin-top            : 23px;
   margin-bottom         : 21px;
+}
+
+.form-elements__input-datepicker-range {
+  width                 : $formMdElementWidth;
+  margin-top            : 19px;
+  margin-bottom         : 41px;
 }
 
 .form-elements__input-header {
@@ -44,4 +51,8 @@
   text-transform        : uppercase;
   font-size             : 12px;
   line-height           : 9px;
+}
+
+.form-elements__input-item-subscribe {
+  width: $formMdElementWidth;
 }

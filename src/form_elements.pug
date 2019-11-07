@@ -1,10 +1,8 @@
 include templates/head
 include block/header/header
 include block/forms/input/input
-include block/forms/select/select
 include block/forms/dropdown/dropdown
 include block/forms/double-date-range/double-date-range
-include block/forms/subscribe/subscribe
 -
   const selectOptions = {
     data : [
@@ -41,7 +39,7 @@ html
           .form-elements__input
             +input({label: 'Text field', state: 'Default',placeholder:'Email'})
           .form-elements__input
-            +input({label: 'Text field', state: 'Hover/focus', value:'This is pretty awesome', midificatorFocus: true})
+            +input({label: 'Text field', state: 'Hover/focus', value:'This is pretty awesome', modificatorFocus: true})
           .form-elements__input
             .form-elements__input-header
               .form-elements__input-header-label.cta-text Dropdown
@@ -56,12 +54,15 @@ html
               +input({placeholder: 'ДД.ММ.ГГГГ', dateMask: true})
           .form-elements__input-double-date-range
             +double-date-range(doubleDateRange)
+          .form-elements__input-datepicker-range
+            +input({label:'filter date dropdown', expandMoreArrow: true, placeholder:'ДД.ММ.ГГГГ', value:'19 авг - 23 авг', datepickerRange: true})
           .form-elements__input
             .form-elements__input-header
               .form-elements__input-header-label.cta-text subscription text field
-            .form-elements__input-item
-              +subscribe({placeholder: 'Email'})
+            .form-elements__input-item-subscribe
+              +input({placeholder: 'Email', forwardArrow: true})
         .form-elements__content-column
         .form-elements__content-column
+          
         .form-elements__content-column
         .form-elements__content-column
