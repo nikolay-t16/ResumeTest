@@ -1,6 +1,6 @@
 @import '../../../assets/scss/utils/vars';
 
-.checkbox {
+.radiobutton {
   position: relative;
   display: block;
   padding-left: 30px;
@@ -19,14 +19,16 @@
     left: 0;
     height: 18px;
     width: 18px;
-    border: 1px solid $darkShade25;
-    border-radius: 4px;
     background-color: #fff;
+    border: 1px solid $darkShade25;
+    border-radius: 50%;
   }
 
-  &_input:checked ~ &__checkmark {
+  &__input:checked ~ &__checkmark {
     background-color: #fff;
     border: 1px solid $purple;
+    color: $darkShade75;
+
   }
 
   &__checkmark:after {
@@ -37,15 +39,11 @@
 
   &__input:checked ~ &__checkmark:after {
     display: block;
-  }
-
-  &__checkmark:after {
-    left: 6px;
     top: 3px;
-    width: 4px;
-    height: 7px;
-    border: solid $purple;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   }
 }

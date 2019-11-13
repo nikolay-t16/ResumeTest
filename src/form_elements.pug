@@ -4,6 +4,7 @@ include block/forms/input/input
 include block/forms/dropdown/dropdown
 include block/forms/double-date-range/double-date-range
 include block/forms/checkbox-list/checkbox-list
+include block/forms/radiobutton-list/radiobutton-list
 -
   const selectOptions = {
     data : [
@@ -35,6 +36,14 @@ include block/forms/checkbox-list/checkbox-list
       {label: 'Можно курить'},
       {label: 'Можно с питомцами'},
       {label: 'Можно пригласить гостей (до 10 человек)'},
+    ],
+  }
+  const radioButtons = {
+    label: 'Radio Buttons',
+    name: 'sex',
+    items: [
+      {label: 'Мужчина', value: 'men'},
+      {label: 'Женщина', value: 'women'},
     ],
   }
 doctype html
@@ -73,5 +82,7 @@ html
         .form-elements__content-column
           .form-elements__checkbox-list
             +checkbox-list(checkboxList)
+          .form-elements__radiobutton-list
+            +radiobutton-list(radioButtons)
         .form-elements__content-column
         .form-elements__content-column

@@ -1,0 +1,11 @@
+mixin radiobutton(options = {})
+  -
+    const {
+      label = '',
+      name = '',
+      checked = false,
+    } = options;
+  label.radiobutton
+    input(type="radio" checked=checked name=name).radiobutton__input
+    span.radiobutton__checkmark
+    =label

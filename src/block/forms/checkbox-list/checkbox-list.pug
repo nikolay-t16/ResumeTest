@@ -6,8 +6,9 @@ mixin checkbox-list(options = {})
     items = [],
     } = options
   .checkbox-list
-    .checkbox-list__label.cta-text
-      =label
+    if label
+      .checkbox-list__label.cta-text
+        =label
     if items
       .checkbox-list__items
         each item in items

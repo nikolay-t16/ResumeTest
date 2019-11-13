@@ -1,0 +1,12 @@
+.radiobutton-list {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__item {
+    margin-bottom: 13px;
+  }
+}

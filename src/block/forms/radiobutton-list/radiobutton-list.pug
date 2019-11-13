@@ -1,0 +1,17 @@
+include ../radiobutton/radiobutton
+mixin radiobutton-list(options = {})
+  -
+    const {
+    label = '',
+    name = '',
+    items = [],
+    } = options
+  .radiobutton-list
+    if label
+      .radiobutton-list__label.cta-text
+        =label
+    if items
+      .radiobutton-list__items
+        each item in items
+          .radiobutton-list__item
+            +radiobutton({label: item.label, name})
