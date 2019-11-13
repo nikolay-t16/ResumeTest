@@ -1,0 +1,15 @@
+include ../checkbox/checkbox
+mixin checkbox-list(options = {})
+  -
+    const {
+    label = '',
+    items = [],
+    } = options
+  .checkbox-list
+    .checkbox-list__label.cta-text
+      =label
+    if items
+      .checkbox-list__items
+        each item in items
+          .checkbox-list__item
+            +checkbox({label: item.label})

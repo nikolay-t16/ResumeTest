@@ -1,7 +1,10 @@
 mixin checkbox(options = {})
   -
-    const {label = ''} = options
-  const items = options.items
-  .checkbox
-    .checkbox__label
-      =label
+    const {
+      label = '',
+      checked = false,
+    } = options;
+  label.checkbox
+    input(type="checkbox" checked=checked)
+    span.checkbox__checkmark
+    =label

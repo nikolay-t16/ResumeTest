@@ -3,6 +3,7 @@ include block/header/header
 include block/forms/input/input
 include block/forms/dropdown/dropdown
 include block/forms/double-date-range/double-date-range
+include block/forms/checkbox-list/checkbox-list
 -
   const selectOptions = {
     data : [
@@ -28,6 +29,14 @@ include block/forms/double-date-range/double-date-range
       value: '19.08.2019'
     },
   }
+  const checkboxList = {
+    label: 'Checkbox Buttons',
+    items: [
+      {label: 'Можно курить'},
+      {label: 'Можно с питомцами'},
+      {label: 'Можно пригласить гостей (до 10 человек)'},
+    ],
+  }
 doctype html
 html
   +head({title: 'form_elements', page: 'form_elements'})
@@ -39,7 +48,7 @@ html
           .form-elements__input
             +input({label: 'Text field', state: 'Default',placeholder:'Email'})
           .form-elements__input
-            +input({label: 'Text field', state: 'Hover/focus', value:'This is pretty awesome', modificatorFocus: true})
+            +input({label: 'Text field', state: 'Hover / Focus', value:'This is pretty awesome', modificatorFocus: true})
           .form-elements__input
             .form-elements__input-header
               .form-elements__input-header-label.cta-text Dropdown
@@ -62,7 +71,7 @@ html
             .form-elements__input-item-subscribe
               +input({placeholder: 'Email', forwardArrow: true})
         .form-elements__content-column
-        .form-elements__content-column
-          
+          .form-elements__checkbox-list
+            +checkbox-list(checkboxList)
         .form-elements__content-column
         .form-elements__content-column

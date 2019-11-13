@@ -12,10 +12,10 @@
   &__content {
     width: 1440px;
     margin: 0 auto;
-    padding-left: 59px;
+    padding-left: 58px;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 320px 126px 1fr 126px 1fr;
+    grid-template-columns: 446px 1fr 126px 1fr;
   }
 
   &__content-column {
@@ -54,5 +54,8 @@
 
   &__input-item-subscribe {
     width: $formMdElementWidth;
+  }
+  &__checkbox-list {
+    width: 240px;
   }
 }
