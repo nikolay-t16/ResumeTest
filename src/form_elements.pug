@@ -5,6 +5,7 @@ include block/forms/dropdown/dropdown
 include block/forms/double-date-range/double-date-range
 include block/forms/checkbox-list/checkbox-list
 include block/forms/radiobutton-list/radiobutton-list
+include block/forms/toggle-list/toggle-list
 -
   const selectOptions = {
     data : [
@@ -46,6 +47,13 @@ include block/forms/radiobutton-list/radiobutton-list
       {label: 'Женщина', value: 'women'},
     ],
   }
+  const toggle = {
+    label: 'Toggle',
+    items: [
+      {label: 'Получать спецпредложения', checked: true},
+      {label: 'Получать спецпредложения'},
+    ],
+  }
 doctype html
 html
   +head({title: 'form_elements', page: 'form_elements'})
@@ -84,5 +92,7 @@ html
             +checkbox-list(checkboxList)
           .form-elements__radiobutton-list
             +radiobutton-list(radioButtons)
+          .form-elements__toggle-list
+            +toggle-list(toggle)
         .form-elements__content-column
         .form-elements__content-column

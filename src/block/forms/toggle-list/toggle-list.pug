@@ -1,0 +1,17 @@
+include ../toggle/toggle
+mixin toggle-list(options = {})
+  -
+    const {
+    label = '',
+    checked = false,
+    items = [],
+    } = options
+  .toggle-list
+    if label
+      .toggle-list__label.cta-text
+        =label
+    if items
+      .toggle-list__items
+        each item in items
+          .toggle-list__item
+            +toggle(item)
