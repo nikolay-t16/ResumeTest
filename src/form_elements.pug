@@ -6,6 +6,7 @@ include block/forms/double-date-range/double-date-range
 include block/forms/checkbox-list/checkbox-list
 include block/forms/radiobutton-list/radiobutton-list
 include block/forms/toggle-list/toggle-list
+include block/forms/like-button/like-button
 -
   const selectOptions = {
     data : [
@@ -94,5 +95,13 @@ html
             +radiobutton-list(radioButtons)
           .form-elements__toggle-list
             +toggle-list(toggle)
+          .form-elements__like-button
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text like button
+            .form-elements__like-button-items
+              .form-elements__like-button-item
+                +like-button({value: 2})
+              .form-elements__like-button-item
+                +like-button({value: 12, isVoted: true})
         .form-elements__content-column
         .form-elements__content-column

@@ -1,0 +1,13 @@
+mixin like-button(options={})
+  -
+    const {
+      value = 0,
+      isVoted = false,
+    } = options;
+    const blockClass = 'like-button' + (isVoted ? ' like-button_is-voted' : '');
+    const iconClassName = 'material-icons like-button__icon' + (isVoted ? ' like-button_is-voted' : '');
+    const spanClassName = 'like-button__value' + (isVoted ? ' like-button_is-voted' : '');
+    const icon = isVoted ? 'favorite' : 'favorite_border';
+  div(class=blockClass)
+    i(class=iconClassName)= icon
+    span(class=spanClassName)= value

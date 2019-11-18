@@ -55,14 +55,28 @@
   &__input-item-subscribe {
     width: $formMdElementWidth;
   }
+
   &__checkbox-list {
     width: 240px;
   }
+
   &__radiobutton-list {
     margin-top: 28px;
     width: 221px;
   }
+
   &__toggle-list {
     margin-top: 30px;
+  }
+
+  &__like-button {
+    margin-top: 47px;
+  }
+
+  &__like-button-items {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
   }
 }
