@@ -5,8 +5,9 @@ include block/forms/dropdown/dropdown
 include block/forms/double-date-range/double-date-range
 include block/forms/checkbox-list/checkbox-list
 include block/forms/radiobutton-list/radiobutton-list
-include block/forms/toggle-list/toggle-list
+include block/forms/toggle/toggle
 include block/forms/like-button/like-button
+include block/forms/rate-button/rate-button
 -
   const selectOptions = {
     data : [
@@ -94,7 +95,12 @@ html
           .form-elements__radiobutton-list
             +radiobutton-list(radioButtons)
           .form-elements__toggle-list
-            +toggle-list(toggle)
+            .form-elements__input-header.form-elements_input-header-toogle
+              .form-elements__input-header-label.cta-text Toggle
+            .form-elements__input.form-elements_input-toogle
+              +toggle({label: 'Получать спецпредложения', checked: true})
+            .form-elements__input
+              +toggle({label: 'Получать спецпредложения'})
           .form-elements__like-button
             .form-elements__input-header
               .form-elements__input-header-label.cta-text like button
@@ -103,5 +109,12 @@ html
                 +like-button({value: 2})
               .form-elements__like-button-item
                 +like-button({value: 12, isVoted: true})
+          .form-elements__input
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text rate button
+            .form-elements__input
+              +rate-button({value: 4})
+            .form-elements__input
+              +rate-button({value: 4})
         .form-elements__content-column
         .form-elements__content-column

@@ -5,5 +5,6 @@ import '../block/forms/dropdown/dropdown.js';
 import '../block/forms/double-date-range/double-date-range.js';
 import '../block/forms/checkbox-list/checkbox-list.js';
 import '../block/forms/radiobutton-list/radiobutton-list.js';
-import '../block/forms/toggle-list/toggle-list.js';
+import '../block/forms/toggle/toggle.js';
 import '../block/forms/like-button/like-button.js';
+import '../block/forms/rate-button/rate-button.js';

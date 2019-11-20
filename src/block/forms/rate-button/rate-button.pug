@@ -1,0 +1,9 @@
+mixin rate-button(options = {})
+  -
+    const {
+      value = 0
+    } = options;
+  .rate-button
+    - for (let x = 0; x < 5; x++)
+      - const icon = 'star'
+       i.material-icons.star_filled= star

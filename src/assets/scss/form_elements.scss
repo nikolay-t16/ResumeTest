@@ -70,7 +70,7 @@
   }
 
   &__like-button {
-    margin-top: 47px;
+    margin-top: 25px;
   }
 
   &__like-button-items {
@@ -78,5 +78,9 @@
     display: flex;
     justify-content: space-between;
     width: 90px;
+  }
+
+  &_input-header-toogle, &_input-toogle {
+    margin-bottom: 16px;
   }
 }
