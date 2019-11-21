@@ -83,4 +83,15 @@
   &_input-header-toogle, &_input-toogle {
     margin-bottom: 16px;
   }
+
+  &__rate-button {
+    margin-top: 40px;
+  }
+
+  &__rate-button-items {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+  }
 }

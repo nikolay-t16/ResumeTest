@@ -5,5 +5,5 @@ mixin rate-button(options = {})
     } = options;
   .rate-button
     - for (let x = 0; x < 5; x++)
-      - const icon = 'star'
-       i.material-icons.star_filled= star
+      - const icon = x < value ? 'star' : 'star_border';
+       i.material-icons.rate-button__icon= icon
