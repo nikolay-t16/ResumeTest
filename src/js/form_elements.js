@@ -8,3 +8,4 @@ import '../block/forms/radiobutton-list/radiobutton-list.js';
 import '../block/forms/toggle/toggle.js';
 import '../block/forms/like-button/like-button.js';
 import '../block/forms/rate-button/rate-button.js';
+import '../block/forms/range-slider/range-slider.js';

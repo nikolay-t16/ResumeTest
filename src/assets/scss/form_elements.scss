@@ -15,7 +15,7 @@
     padding-left: 58px;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 446px 1fr 126px 1fr;
+    grid-template-columns: 446px 392px 326px;
   }
 
   &__content-column {
@@ -93,5 +93,9 @@
     display: flex;
     justify-content: space-between;
     width: 260px;
+  }
+
+  &__range-slider {
+    width: 266px;
   }
 }

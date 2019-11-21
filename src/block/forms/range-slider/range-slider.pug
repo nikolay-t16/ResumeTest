@@ -1,0 +1,24 @@
+mixin range-slider(options = {})
+  -
+    const {
+      label = '',
+      min = 0,
+      max = 0,
+      valueMin = 0,
+      valueMax = 0,
+    } = options;
+    const strToPrice = str => str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+    const labelMin = strToPrice(valueMin.toString());
+    const labelMax = strToPrice(valueMax.toString());
+  .range-slider
+    .range-slider__header
+      .range-slider__header-label.cta-text
+        =label
+      .range-slider__header-value.state-text
+        span.range-slider__header-value-min
+          =labelMin
+        span &#8381;
+        =' - '
+        span.range-slider__header-value-max
+          =labelMax
+        span &#8381;
