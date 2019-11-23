@@ -26,7 +26,7 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
   outline: none;
 }
 
-.button:hover .button_state-hover {
+.button:hover, .button_state-hover {
   opacity: 0.5;
 }
 
@@ -64,7 +64,7 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
   transform: translateZ(-1px);
 }
 
-.button_theme-empty:hover, .button_state-hover {
+.button_theme-empty:hover, .button_theme-empty.button_state-hover {
   opacity: 1;
 }
 
