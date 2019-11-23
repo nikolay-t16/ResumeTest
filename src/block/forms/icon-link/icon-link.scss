@@ -1,0 +1,11 @@
+@import '../../../assets/scss/utils/vars';
+
+.icon-link__a {
+  text-decoration: none;
+  color: $mainColor;
+}
+
+.icon-link__a:hover,
+.icon-link__a.icon-link_state-hover {
+  opacity: 0.5;
+}

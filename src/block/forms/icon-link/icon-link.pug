@@ -1,0 +1,12 @@
+mixin icon-link(options = {})
+  -
+    const {
+      label = '',
+      url = '',
+      hover = false
+    } = options;
+    let className = '';
+    if(hover)
+      className = 'icon-link_state-hover';
+  .icon-link
+    a.icon-link__a.cta-text(class=className href=url)= label

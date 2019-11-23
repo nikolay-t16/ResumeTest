@@ -10,6 +10,7 @@ include block/forms/like-button/like-button
 include block/forms/rate-button/rate-button
 include block/forms/range-slider/range-slider
 include block/forms/button/button
+include block/forms/icon-link/icon-link
 
 -
   const selectOptions = {
@@ -149,4 +150,8 @@ html
                   each button in buttonRow
                     .form-elements__buttons-item
                       +button(button)
+          .form-elements__icon-links
+            +icon-link({label: 'CLICK ME'})
+            +icon-link({label: 'CLICK ME', hover: true})
+
         .form-elements__content-column

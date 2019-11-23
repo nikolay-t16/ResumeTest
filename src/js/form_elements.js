@@ -10,3 +10,4 @@ import '../block/forms/like-button/like-button.js';
 import '../block/forms/rate-button/rate-button.js';
 import '../block/forms/range-slider/range-slider.js';
 import '../block/forms/button/button.js';
+import '../block/forms/icon-link/icon-link.js';
