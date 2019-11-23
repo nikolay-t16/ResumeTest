@@ -26,7 +26,7 @@
 
   &_input:checked ~ &__checkmark {
     background-color: #fff;
-    border: 1px solid $purple;
+    border: 1px solid $mainColor;
   }
 
   &__checkmark:after {
@@ -44,7 +44,7 @@
     top: 3px;
     width: 4px;
     height: 7px;
-    border: solid $purple;
+    border: solid $mainColor;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }

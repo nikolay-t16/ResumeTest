@@ -1,65 +1,71 @@
 // Font
-$mainFont                : 'Montserrat';
-$widgetsTitleFont        : 'Quicksand';
+$mainFont: 'Montserrat';
+$widgetsTitleFont: 'Quicksand';
 
 // Size
-$mainFontWeight          : normal;
-$mainFontStyle           : normal;
-$mainFontSyze            : 14px;
-$mainLineHeght           : 24px;
+$mainFontWeight: normal;
+$mainFontStyle: normal;
+$mainFontSyze: 14px;
+$mainLineHeght: 24px;
 
-$desktopWidth            : 1280px;
-$smDesktopWidth          : 980px;
-$tableWidth              : 768px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
+$desktopWidth: 1280px;
+$smDesktopWidth: 980px;
+$tableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
 
 // Colors
-$darkShade               : #1F2041;
-$darkShade75             : rgba(31, 32, 65, 0.75);
-$darkShade50             : rgba(31, 32, 65, 0.50);
-$darkShade25             : rgba(31, 32, 65, 0.25);
-$darkShade10             : rgba(31, 32, 65, 0.1);
-$darkShade5              : rgba(31, 32, 65, 0.05);
-$purple                  : #BC9CFF;
-$purpleGradient          : #8BA4F9;
-$green                   : #6FCF97;
-$defaultColor            : $darkShade75;
-$formBigElementWidth     : 320px;
-$formMdElementWidth      : 266px;
-$formSmElementWidth      : 150px;
-$borderFormElement       : 1px solid $darkShade25;
+$darkShade: #1F2041;
+$darkShade75: rgba(31, 32, 65, 0.75);
+$darkShade50: rgba(31, 32, 65, 0.50);
+$darkShade25: rgba(31, 32, 65, 0.25);
+$darkShade10: rgba(31, 32, 65, 0.1);
+$darkShade5: rgba(31, 32, 65, 0.05);
+
+$purple: #BC9CFF;
+$purpleGradient: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+$green: #6FCF97;
+$greenGradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$mainColor: $purple;
+$mainGradientColor: $purpleGradient;
+$secondColort: $green;
+$secondColorGradient: $greenGradient;
+$defaultTextColor: $darkShade75;
+$formBigElementWidth: 320px;
+$formMdElementWidth: 266px;
+$formSmElementWidth: 150px;
+$borderFormElement: 1px solid $darkShade25;
 
 @mixin formElement {
-  width                  : 100%;
-  height                 : 44px;
-  background             : #FFFFFF;
-  border                 : $borderFormElement;
-  box-sizing             : border-box;
-  border-radius          : 4px;
-  padding-left           : 14px;
-  padding-right          : 14px;
+  width: 100%;
+  height: 44px;
+  background: #FFFFFF;
+  border: $borderFormElement;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 @mixin formElementPlaceholder {
-  font-family            : $mainFont;
-  font-style             : $mainFontStyle;
-  font-weight            : $mainFontWeight;
-  font-size              : $mainFontSyze;
-  line-height            : $mainLineHeght;
-  color                  : $darkShade25;
+  font-family: $mainFont;
+  font-style: $mainFontStyle;
+  font-weight: $mainFontWeight;
+  font-size: $mainFontSyze;
+  line-height: $mainLineHeght;
+  color: $darkShade25;
 }
 
 @mixin formElementFocus {
-  border-color          : $darkShade50;
-  outline               : none;
+  border-color: $darkShade50;
+  outline: none;
 }
 
 @mixin defaultFont {
-  font-family           : $mainFont;
-  font-style            : $mainFontStyle;
-  font-weight           : $mainFontWeight;
-  font-size             : $mainFontSyze;
-  line-height           : $mainLineHeght;
-  color                 : $defaultColor;
+  font-family: $mainFont;
+  font-style: $mainFontStyle;
+  font-weight: $mainFontWeight;
+  font-size: $mainFontSyze;
+  line-height: $mainLineHeght;
+  color: $defaultTextColor;
 }

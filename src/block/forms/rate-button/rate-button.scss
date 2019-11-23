@@ -1,6 +1,8 @@
+@import '../../../assets/scss/utils/vars';
+
 .rate-button {
   &__icon {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $mainGradientColor;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

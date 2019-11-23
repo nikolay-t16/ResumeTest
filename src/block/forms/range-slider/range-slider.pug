@@ -6,6 +6,7 @@ mixin range-slider(options = {})
       max = 0,
       valueMin = 0,
       valueMax = 0,
+      name = '',
     } = options;
     const strToPrice = str => str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
     const labelMin = strToPrice(valueMin.toString());
@@ -22,3 +23,16 @@ mixin range-slider(options = {})
         span.range-slider__header-value-max
           =labelMax
         span &#8381;
+    .range-slider__slider
+      input.range-slider__slider-input(
+        type="text"
+        name=name
+        value=""
+        data-type="double"
+        data-min=min
+        data-max=max
+        data-from=valueMin
+        data-to=valueMax
+        data-hide-min-max=true
+        data-hide-from-to=true
+      )
