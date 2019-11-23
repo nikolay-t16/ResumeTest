@@ -9,6 +9,8 @@ include block/forms/toggle/toggle
 include block/forms/like-button/like-button
 include block/forms/rate-button/rate-button
 include block/forms/range-slider/range-slider
+include block/forms/button/button
+
 -
   const selectOptions = {
     data : [
@@ -64,6 +66,17 @@ include block/forms/range-slider/range-slider
     valueMin: 5000,
     valueMax: 10000,
   }
+
+  const buttons = [
+    [
+      {label: 'CLICK ME', size: 'm'},
+      {label: 'CLICK ME', hover: 'true', size: 'm'},
+    ],
+    [
+      {label: 'CLICK ME', size: 'm', isEmpty: true},
+      {label: 'CLICK ME', hover: 'true', size: 'm', isEmpty: true},
+    ],
+  ];
 
 doctype html
 html
@@ -127,4 +140,13 @@ html
         .form-elements__content-column
           .form-elements__range-slider
             +range-slider(rangeSlider)
+          .form-elements__buttons
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text buttons
+            .form-elements__buttons-items
+              each buttonRow in buttons
+                .form-elements__buttons-items-row
+                  each button in buttonRow
+                    .form-elements__buttons-item
+                      +button(button)
         .form-elements__content-column

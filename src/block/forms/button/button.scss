@@ -1,0 +1,73 @@
+$background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
+.button {
+  padding: 10px 21px 9px 19px;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+  background: $background;
+  width: max-content;
+  text-transform: uppercase;
+  letter-spacing: -0.1px;
+}
+
+.button_size-medium, .button_size-large {
+  padding: 15px 22px 14px 20px;
+}
+
+.button_size-large {
+  width: 100%;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover .button_state-hover {
+  opacity: 0.5;
+}
+
+.button_theme-empty {
+  padding: 8px 19px 7px 18.3px;
+  border-radius: 22px;
+  border: none;
+  background: $background;
+  width: max-content;
+  color: #BC9CFF;
+  background: white;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-top: 2px;
+  letter-spacing: 0;
+}
+
+.button_theme-empty.button_size-medium, .button_theme-empty.button_size-large {
+  padding: 13.5px 17px 11px 20.3px;
+}
+
+.button_theme-empty.button_size-large {
+  width: 100%;
+}
+
+.button_theme-empty:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  border-radius: inherit;
+  background: $background;
+  transform: translateZ(-1px);
+}
+
+.button_theme-empty:hover, .button_state-hover {
+  opacity: 1;
+}
+
+.button_theme-empty:hover:before, .button_state-hover:before {
+  opacity: 0.5;
+}

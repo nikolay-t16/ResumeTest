@@ -9,3 +9,4 @@ import '../block/forms/toggle/toggle.js';
 import '../block/forms/like-button/like-button.js';
 import '../block/forms/rate-button/rate-button.js';
 import '../block/forms/range-slider/range-slider.js';
+import '../block/forms/button/button.js';

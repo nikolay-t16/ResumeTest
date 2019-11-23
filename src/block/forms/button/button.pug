@@ -1,0 +1,24 @@
+mixin button(options = {})
+  -
+    const {
+      label = '',
+      size = '',
+      hover = false,
+      isEmpty
+    } = options;
+    let className = 'button';
+    if(isEmpty)
+      className += ' button_theme-empty';
+    if(hover)
+      className += ' button_state-hover';
+    switch (size) {
+      case 'm':
+      className += ' button_size-medium';
+      break;
+      case 'l':
+      className += ' button_size-large';
+      break;
+    }
+    if(size === 'l')
+      className += ' button_size-large';
+  button(class=className)= label
