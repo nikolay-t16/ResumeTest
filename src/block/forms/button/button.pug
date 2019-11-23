@@ -4,7 +4,8 @@ mixin button(options = {})
       label = '',
       size = '',
       hover = false,
-      isEmpty
+      isEmpty = false,
+      arrow = false,
     } = options;
     let className = 'button';
     if(isEmpty)
@@ -22,3 +23,5 @@ mixin button(options = {})
     if(size === 'l')
       className += ' button_size-large';
   button(class=className)= label
+    if arrow
+      i.material-icons.button__arrow arrow_forward

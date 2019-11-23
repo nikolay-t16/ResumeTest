@@ -1,5 +1,6 @@
 $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 100%);
 .button {
+  position: relative;
   padding: 10px 21px 9px 19px;
   border-radius: 22px;
   font-weight: bold;
@@ -14,8 +15,13 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
   letter-spacing: -0.1px;
 }
 
-.button_size-medium, .button_size-large {
+.button_size-medium {
   padding: 15px 22px 14px 20px;
+}
+
+.button_size-medium, .button_size-large {
+  letter-spacing: 0.6px;
+  padding: 15px 18px 14px 20px;
 }
 
 .button_size-large {
@@ -70,4 +76,12 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
 
 .button_theme-empty:hover:before, .button_state-hover:before {
   opacity: 0.5;
+}
+
+.button__arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 10px;
+  padding-top: 10px;
 }
