@@ -1,0 +1,9 @@
+mixin pagination(options = {})
+  -
+    const {
+      pagesCount = 0,
+      perPage = 0,
+      curentPage = 1,
+    } = options;
+  .pagination
+    .pagination__pages(data-pages=pagesCount data-per_page=perPage data-curent_page=curentPage)

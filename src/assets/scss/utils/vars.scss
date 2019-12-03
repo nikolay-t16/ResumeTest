@@ -69,3 +69,11 @@ $borderFormElement: 1px solid $darkShade25;
   line-height: $mainLineHeght;
   color: $defaultTextColor;
 }
+
+@mixin ctaText() {
+  font-weight           : bold;
+  font-size             : 12px;
+  line-height           : 15px;
+  text-transform        : uppercase;
+  color                 : $darkShade
+}

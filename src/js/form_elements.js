@@ -11,3 +11,4 @@ import '../block/forms/rate-button/rate-button.js';
 import '../block/forms/range-slider/range-slider.js';
 import '../block/forms/button/button.js';
 import '../block/forms/icon-link/icon-link.js';
+import '../block/pagination/pagination.js';

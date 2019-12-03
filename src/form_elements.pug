@@ -11,6 +11,7 @@ include block/forms/rate-button/rate-button
 include block/forms/range-slider/range-slider
 include block/forms/button/button
 include block/forms/icon-link/icon-link
+include block/pagination/pagination
 
 -
   const selectOptions = {
@@ -155,5 +156,9 @@ html
             +icon-link({label: 'CLICK ME', hover: true})
           .form-elements__button-large
             +button({label: 'перейти к оплате', size: 'l', arrow: true})
-
-        .form-elements__content-column
+          .form-elements__pagination
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text pagination
+            .form-elements__pagination-item
+              +pagination({pagesCount: 180, perPage: 12, curentPage:1})
+        .form-elements__content-colum
