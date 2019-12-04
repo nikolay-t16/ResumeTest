@@ -5,12 +5,15 @@
     display: flex;
     justify-content: space-between;
     width: 198px;
+
     @media only screen and (max-width: 940px) {
       width: 185px;
     }
+
     @media only screen and (max-width: 780px) {
       width: 190px;
     }
+
     @media only screen and (max-width: 480px) {
       display: none;
     }
@@ -25,9 +28,11 @@
     border-left-color: rgba(31, 32, 65, 0.1);
     align-self: center;
     display: flex;
+
     @media only screen and (max-width: 980px) {
       padding-left: 10px;
     }
+
     @media only screen and (max-width: 780px) {
       border-left: none;
     }
@@ -35,6 +40,7 @@
 
   &__mobile {
     display: none;
+
     @media only screen and (max-width: 480px) {
       display: flex;
     }

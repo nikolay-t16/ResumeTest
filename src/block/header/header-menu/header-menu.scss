@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   font-size: 14px;
+
   @media only screen and (max-width: 780px) {
     justify-content: space-around;
     width: 100%;
@@ -14,9 +15,12 @@
     color: $darkShade50;
     letter-spacing: -.2px;
     display: flex;
+    position: relative;
+
     @media only screen and (max-width: 940px) {
       margin-left: 15px;
     }
+
     @media only screen and (max-width: 780px) {
       margin-left: 0px;
     }
@@ -30,13 +34,14 @@
   &__item:first-of-type {
     margin-left: 0px;
   }
+
   &__item_active {
     font-weight: bold;
     color: $darkShade75;
     letter-spacing: -0.12px;
   }
 
-  .header-menu_sub-items {
+  &_sub-items {
     margin-right: -9px;
     position: relative;
   }
@@ -44,6 +49,7 @@
   &__expand_more {
     padding-top: 1px;
     cursor: pointer;
+    width: 13px;
   }
 
   &__sub-menu {
@@ -57,12 +63,15 @@
     background: white;
     z-index: 1;
   }
+
   &__sub-menu-item {
-    border-top: 1px groove $darkShade10;
+    border: 1px groove $darkShade10;
+    border-top: none;
     padding: 10px;
     display: flex;
     color: inherit;
   }
+
   &__sub-menu-item:last-of-type {
     border-bottom: 1px groove $darkShade10;
   }

@@ -12,13 +12,18 @@
     display: flex;
     padding-top: 100px;
     padding-bottom: 79px;
+    padding-left: 7px;
+    padding-right: 6px;
+
     @media only screen and (max-width: 1180px) {
       width: 96%;
       justify-content: space-between;
     }
+
     @media only screen and (max-width: 950px) {
       flex-wrap: wrap;
     }
+
     @media only screen and (max-width: 850px) {
       padding-top: 23px;
       padding-bottom: 23px;
@@ -30,10 +35,12 @@
   &__widgets-logo {
     width: 240px;
     margin-right: 60px;
+
     @media only screen and (max-width: 1180px) {
       width: auto;
       margin-right: 0px;
     }
+
     @media only screen and (max-width: 850px) {
       order: 2;
     }
@@ -44,6 +51,7 @@
     padding-left: 0px;
     letter-spacing: -.1px;
     width: 262px;
+
     @media only screen and (max-width: 950px) {
       width: 200px;
     }
@@ -53,18 +61,22 @@
     width: 100px;
     margin-right: 100px;
     margin-top: 4px;
+
     @media only screen and (max-width: 1180px) {
       margin-right: 0px;
       width: auto;
     }
+
     @media only screen and (max-width: 850px) {
       margin-left: 70px;
       margin-right: 70px;
     }
+
     @media only screen and (max-width: 730px) {
       margin-left: 40px;
       margin-right: 40px;
     }
+
     @media only screen and (max-width: 550px) {
       margin-left: 20px;
       margin-right: 20px;
@@ -87,6 +99,7 @@
 
   &__widgets-subscribe {
     margin-top: 4px;
+
     @media only screen and (max-width: 850px) {
       order: 2;
     }
@@ -99,6 +112,7 @@
     letter-spacing: -0.2px;
     word-spacing: -0.6px;
     margin-bottom: 18px;
+
     @media only screen and (max-width: 850px) {
       margin-bottom: 28px;
     }
@@ -120,6 +134,7 @@
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
+
     @media only screen and (max-width: 633px) {
       justify-content: center;
     }
@@ -129,10 +144,12 @@
     letter-spacing: -0.1px;
     padding-left: 140px;
     width: fit-content;
+
     @media only screen and (max-width: 950px) {
       padding-left: 10%;
       padding-right: 10%;
     }
+
     @media only screen and (max-width: 633px) {
       padding-bottom: 23px;
     }
@@ -142,9 +159,11 @@
     display: flex;
     align-items: center;
     padding-right: 141px;
+
     @media only screen and (max-width: 950px) {
       padding-right: 10%;
     }
+
     @media only screen and (max-width: 633px) {
       padding-left: 10%;
     }
@@ -156,6 +175,6 @@
   }
 
   &__widgets-subscribe-form {
-    width: $formMdElementWidth;
+    width: 260px;
   }
 }

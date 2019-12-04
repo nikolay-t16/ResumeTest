@@ -1,12 +1,13 @@
 .toggle-list {
-  &__items {}
   &__label {
     letter-spacing: -0.1px;
     margin-bottom: 16px;
   }
+
   &__item {
     margin-bottom: 15px;
   }
+
   &__item:last-of-type {
     margin-bottom: 0px;
   }
