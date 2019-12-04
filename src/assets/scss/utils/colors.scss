@@ -65,7 +65,7 @@
 }
 
 .color-button {
-  background: linear-gradient(180deg, $purple 0%, $purpleGradient 100%);
+  background: $purpleGradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
