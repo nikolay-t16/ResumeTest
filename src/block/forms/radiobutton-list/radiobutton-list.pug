@@ -14,4 +14,4 @@ mixin radiobutton-list(options = {})
       .radiobutton-list__items
         each item in items
           .radiobutton-list__item
-            +radiobutton({label: item.label, name})
+            +radiobutton({label: item.label, name, checked: item.checked})
