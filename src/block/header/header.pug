@@ -11,10 +11,10 @@ mixin header(options = {})
     .header__content
       .header__logo
         .header__menu-mobile
-          +header-menu-mobile(menu)
+          +header-menu-mobile({menu})
         a(href='/')
           include ../logo/logo
       .header__menu
-        +header-menu(menu)
+        +header-menu({menu})
       .header__auth
         +header-auth({user: user})

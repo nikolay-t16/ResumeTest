@@ -1,8 +1,15 @@
 $material-icons-font-path: '~material-icons/iconfont/';
 @import '~material-icons/iconfont/material-icons.scss';
+@import '~normalize.css';
 @import 'vars';
 @import 'colors';
 @import 'fonts';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   @include defaultFont;
