@@ -1,29 +1,22 @@
-mixin dropdown(header, firstOption, secondOption, thirdOption, placeholder)
-    .dropdown
-        .dropdown__label
-          .dropdown__label-text Сколько гостей
-          .dropdown__label-icon
-            i.material-icons expand_more
-            input(type="hidden" ).dropdown__input
-        .dropdown__items
-            .dropdown-option
-                .dropdown-option__first= firstOption
-                .dropdown-controller.dropdown-controller_first
-                    button.dropdown-controller__button.button-minus -
-                    .counter.first-counter 0
-                    button.dropdown-controller__button.button-plus +
-            .dropdown-option
-                .dropdown-option__second= secondOption
-                .dropdown-controller.dropdown-controller_second
-                    button.dropdown-controller__button.button-minus -
-                    .counter.second-counter 0
-                    button.dropdown-controller__button.button-plus +
-            .dropdown-option
-                .dropdown-option__third= thirdOption
-                .dropdown-controller.dropdown-controller_third
-                    button.dropdown-controller__button.button-minus -
-                    .counter.third-counter 0
-                    button.dropdown-controller__button.button-plus +
-            .dropdown-option
-                .dropdown-option__clear Очистить
-                .dropdown-option__confirm Применить
+mixin dropdown(options = {})
+  -
+    const {
+        placeHolder = ''
+    } = options;
+  .dropdown.iqdropdown
+    p.iqdropdown-selection
+    .iqdropdown-menu
+      .iqdropdown-menu-option(data-id='adult' data-defaultcount='0' data-mincount='0')
+        div
+          p.iqdropdown-item Adults
+          p.iqdropdown-description 12+ years
+      .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
+        div
+          p.iqdropdown-item Children
+          p.iqdropdown-description 2 - 11 years
+      .iqdropdown-menu-option(data-id='infant')
+        div
+          p.iqdropdown-item Infants
+          p.iqdropdown-description 2 years
+      button.iqdropdown-menu-close
+        | Cerrar

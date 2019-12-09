@@ -161,4 +161,11 @@ html
               .form-elements__input-header-label.cta-text pagination
             .form-elements__pagination-item
               +pagination({pagesCount: 180, perPage: 12, curentPage:1})
-        .form-elements__content-colum
+      .form-elements__content
+        .form-elements__content-column
+          .form-elements__input
+            .form-elements__input-header
+              .form-elements__input-header-label.cta-text Dropdown
+              .form-elements__input-header-state Default
+            .form-elements__input-item
+              +dropdown(selectOptions)
