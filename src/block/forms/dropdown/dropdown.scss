@@ -1,10 +1,12 @@
 @import '../../../assets/scss/utils/vars';
 
 .dropdown {
+  position: relative;
 
   .dropdown__input {
     @include formElement;
     position: relative;
+    cursor: pointer;
   }
 
   .dropdown__input.dropdown_state-open {
@@ -31,10 +33,54 @@
 
   &__items {
     display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    border: $borderFormElement;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 6px;
   }
 
   &__items_state-open {
     display: block;
+  }
+
+  &__item {
+    display: flex;
+    width: 100%;
+    background: #FFFFFF;
+    padding-left: 14px;
+    padding-right: 7px;
+    height: 37px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item-label {
+    padding-top: 3px;
+  }
+
+  &__item-control {
+    display: flex;
+    justify-content: space-between;
+    width: 92px;
+    align-items: center;
+    margin-top: 6px;
+  }
+
+  &__item-control-item {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: $darkShade50;
+    border: 1px solid $darkShade25;
+    background: transparent;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    line-height: 29px;
+    cursor: pointer;
   }
 }
 
