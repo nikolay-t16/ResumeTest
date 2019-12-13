@@ -1,22 +1,26 @@
 mixin dropdown(options = {})
   -
     const {
-        placeHolder = ''
+        label = '',
+        state = '',
+        expanded = false,
+        dropdown = {}
     } = options;
-  .dropdown.iqdropdown
-    p.iqdropdown-selection
-    .iqdropdown-menu
-      .iqdropdown-menu-option(data-id='adult' data-defaultcount='0' data-mincount='0')
-        div
-          p.iqdropdown-item Adults
-          p.iqdropdown-description 12+ years
-      .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
-        div
-          p.iqdropdown-item Children
-          p.iqdropdown-description 2 - 11 years
-      .iqdropdown-menu-option(data-id='infant')
-        div
-          p.iqdropdown-item Infants
-          p.iqdropdown-description 2 years
-      button.iqdropdown-menu-close
-        | Cerrar
+    icon = expanded ? 'expand_less' : 'expand_more'
+  .dropdown
+    if label || state
+      .dropdown__header
+        if label
+          .cta-text= label
+        if state
+          .state-text= state
+    .dropdown__input(class = expanded ? 'dropdown_state-open': '')
+      .dropdown__value= dropdown.valueLabel
+      i.material-icons.dropdown__icon= icon
+    .dropdown__items(class = expanded ? 'dropdown__items_state-open': '')
+      .dropdown__item
+        .dropdown__item-label test
+        .dropdown__item-control
+          .dropdown__item-control-remove -
+          .dropdown__item-control-count -
+          .dropdown__item-control-add +

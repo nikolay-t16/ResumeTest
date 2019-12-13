@@ -1,28 +1,24 @@
 import './dropdown.scss';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
-import './item-quantity-dropdown.scss';
 
 $(function() {
-  $(".dropdown").iqDropdown({
-    minItems: 1,
-    maxItems: 5,
-    selectionText: "passenger",
-    textPlural: "passengers",
-    onChange: function(id, count, totalItems) {
-      console.log(id, count, totalItems);
-      $('.iqdropdown-selection').text('testtt');
-    },
-    beforeDecrement: function(id, itemCount) {
-      if (id === "adult") {
-        return itemCount.adult > itemCount.infant;
+  $('.dropdown').each(function() {
+    const dropdownItems = $(this).find('.dropdown__items');
+    $(this).find('.dropdown__input').click(function() {
+      const obj = $(this);
+      const icon = obj.find('.dropdown__icon');
+      const isClose =  icon.text() === 'expand_more';
+
+      if (isClose) {
+        obj.addClass('dropdown_state-open');
       }
-      return true;
-    },
-    beforeIncrement: function(id, itemCount) {
-      if (id === "infant") {
-        return itemCount.adult > itemCount.infant;
-      }
-      return true;
-    }
+
+      dropdownItems.slideToggle(400, () => {
+        if (!isClose) {
+          obj.removeClass('dropdown_state-open');
+        }
+        icon.text(isClose ? 'expand_less' : 'expand_more');
+      });
+    });
   });
+
 });

@@ -14,7 +14,7 @@
     margin: 0 auto;
     padding-left: 29px;
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 733px;
     grid-template-columns: 446px 392px 326px;
   }
 
@@ -28,10 +28,23 @@
     margin-bottom: 21px;
   }
 
+  &__input_size-l {
+    width: $formBigElementWidth;
+  }
+
+  &__input_size-m {
+    width: $formMdElementWidth;
+  }
+
+  &__input_size-s {
+    width: $formSmElementWidth;
+  }
+
+
   &__input-double-date-range {
     width: $formBigElementWidth;
     margin-top: 23px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 
   &__input-datepicker-range {
