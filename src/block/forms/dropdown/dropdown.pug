@@ -3,8 +3,9 @@ mixin dropdown(options = {})
     const {
       label = '',
       state = '',
+      placeholder = '',
       expanded = false,
-      dropdown = {}
+      items = []
     } = options;
   .dropdown
     if label || state
@@ -13,13 +14,13 @@ mixin dropdown(options = {})
           .cta-text= label
         if state
           .state-text= state
-    .dropdown__input(class = expanded ? 'dropdown_state-open' : '')
-      .dropdown__value= dropdown.valueLabel
+    .dropdown__label(class = expanded ? 'dropdown_state-open': '' data-placeholder=placeholder)
+      .dropdown__value= placeholder
       i.material-icons.dropdown__icon expand_more
-    .dropdown__items(class = expanded ? 'dropdown__items_state-open' : '')
-      if dropdown.items
-        each item in dropdown.items
-          .dropdown__item
+    .dropdown__items(class = expanded ? 'dropdown__items_state-open': '')
+      if items
+        each item in items
+          .dropdown__item(data-label_declensions=JSON.stringify(item.labelDeclensions))
             .dropdown__item-label.cta-text= item.label
             .dropdown__item-control
               .dropdown__item-control-item.dropdown__item-control-remove -

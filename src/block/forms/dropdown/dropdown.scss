@@ -3,13 +3,13 @@
 .dropdown {
   position: relative;
 
-  .dropdown__input {
+  &__label {
     @include formElement;
     position: relative;
     cursor: pointer;
   }
 
-  .dropdown__input.dropdown_state-open {
+  &_state-open {
     border-radius: 4px 4px 0 0;
   }
 
