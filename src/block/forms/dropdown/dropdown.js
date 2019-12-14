@@ -1,6 +1,7 @@
-import './dropdown.scss'
+import './dropdown.scss';
+import '../icon-link/icon-link';
 
-function getItemValue (count, labelDeclensions) {
+function getItemValue(count, labelDeclensions) {
 
   if (labelDeclensions.length < 3 || count < 0) {
     return '';
@@ -18,7 +19,8 @@ function getItemValue (count, labelDeclensions) {
     return `${count} ${labelDeclensions[2]}`;
   }
 }
-function getDropdownItemsData (dropdown) {
+
+function getDropdownItemsData(dropdown) {
   const items = [];
   $(dropdown).find('.dropdown__item').each(function() {
     const value = +$(this).find('.dropdown__item-control-value').text();
@@ -32,10 +34,30 @@ function getDropdownItemsData (dropdown) {
   return items;
 }
 
-function setMultiValue(dropdown) {
-  const dropdownLabelTag = dropdown.find('.dropdown__label');
-  const placeholder = dropdownLabelTag.data('placeholder');
-  const itemsData = getDropdownItemsData(dropdown);
+function cleareDropdownItems(dropdown) {
+  const items = [];
+  $(dropdown).find('.dropdown__item').each(function() {
+    $(this).find('.dropdown__item-control-value').text(0);
+    const labelDeclensions = $(this).data('label_declensions') || [];
+    const item = {
+      value: 0,
+      labelDeclensions,
+    };
+    items.push(item);
+  });
+  return items;
+}
+
+function setMultiValue(
+  dropdown,
+  dropdownLabelTag,
+  valueTag,
+  placeholder,
+  cleareValue = false,
+) {
+  const itemsData = cleareValue ?
+    cleareDropdownItems(dropdown) :
+    getDropdownItemsData(dropdown);
   let label = '';
   const count = itemsData.length > 2 ? 2 : itemsData.length;
   for (let i = 0; i < count; i++) {
@@ -49,17 +71,145 @@ function setMultiValue(dropdown) {
   if (itemsData.length > 2) {
     label += '...';
   }
-  const valueTag =  dropdownLabelTag.find('.dropdown__value');
-  const newValue = label === '' ? placeholder: label;
+  const newValue = label === '' ? placeholder : label;
   valueTag.text(newValue);
 
+}
+
+function setSingleValue(
+  dropdown,
+  dropdownLabelTag,
+  valueTag,
+  placeholder,
+  labelDeclensions,
+  cleareValue = false,
+) {
+  const itemsData = cleareValue ?
+    cleareDropdownItems(dropdown) :
+    getDropdownItemsData(dropdown);
+  let label = '';
+  let value = 0;
+  for (let i = 0; i < itemsData.length; i++) {
+    const item = itemsData[i];
+    value += +item.value;
+  }
+  const newValue = value === 0 ?
+    placeholder :
+    getItemValue(value, labelDeclensions);
+  valueTag.text(newValue);
+
+}
+
+function setValue(
+  dropdown,
+  dropdownLabelTag,
+  valueTag,
+  placeholder,
+  labelDeclensions,
+  isSingleValue,
+  cleareValue = false) {
+  if (isSingleValue) {
+    setSingleValue(
+      dropdown,
+      dropdownLabelTag,
+      valueTag,
+      placeholder,
+      labelDeclensions,
+      cleareValue,
+    );
+  } else {
+    setMultiValue(
+      dropdown,
+      dropdownLabelTag,
+      valueTag,
+      placeholder,
+      cleareValue
+    );
+  }
+}
+
+function setDropDownItemsHandlers(
+  dropdown, dropdownLabelTag, valueTag, placeholder, labelDeclensions,
+  isSingleValue, applyBtn, cleareBtn) {
+  dropdown.find('.dropdown__item').each(function() {
+    const itemValueTag = $(this).find('.dropdown__item-control-value');
+    const addBtn = $(this).find('.dropdown__item-control-add');
+    const removeBtn = $(this).find('.dropdown__item-control-remove');
+
+    addBtn.click(function() {
+      itemValueTag.html(+itemValueTag.html() + 1);
+      if (applyBtn === null) {
+        setValue(
+          dropdown,
+          dropdownLabelTag,
+          valueTag,
+          placeholder,
+          labelDeclensions,
+          isSingleValue
+        );
+      }
+    });
+
+    removeBtn.click(function() {
+      const val = +itemValueTag.html();
+      if (val !== 0) {
+        itemValueTag.html(val === 0 ? 0 : val - 1);
+        if (applyBtn === null) {
+          setValue(
+            dropdown,
+            dropdownLabelTag,
+            valueTag,
+            placeholder,
+            labelDeclensions,
+            isSingleValue
+          );
+        }
+      }
+    });
+
+    if (applyBtn !== null) {
+      applyBtn.click(function() {
+        setValue(
+          dropdown,
+          dropdownLabelTag,
+          valueTag,
+          placeholder,
+          labelDeclensions,
+          isSingleValue
+        );
+      });
+    }
+
+    if (cleareBtn !== null) {
+      cleareBtn.click(function() {
+        setValue(
+          dropdown,
+          dropdownLabelTag,
+          valueTag,
+          placeholder,
+          labelDeclensions,
+          isSingleValue,
+          true);
+      });
+    }
+  });
 }
 
 $(function() {
   $('.dropdown').each(function() {
     const dropdown = $(this);
-    const dropdownItems = $(this).find('.dropdown__items');
-    const dropdownLabelTag = $(this).find('.dropdown__label');
+    const isSingleValue = dropdown.data('single_value') || false;
+    const dropdownItems = dropdown.find('.dropdown__items');
+    const haveApplyBtn = dropdownItems.data('apply_btn');
+    const haveCleareBtn = dropdownItems.data('cleare_btn');
+    const applyBtn = haveApplyBtn ? dropdownItems.find('.dropdown__apply-btn') : null;
+    const cleareBtn = haveCleareBtn ? dropdownItems.find('.dropdown__cleare-btn') : null;
+    const dropdownLabelTag = dropdown.find('.dropdown__label');
+    const valueTag = dropdownLabelTag.find('.dropdown__value');
+    const labelDeclensions = isSingleValue ? dropdownLabelTag.data(
+      'label_declensions') : null;
+
+    const placeholder = dropdownLabelTag.data('placeholder');
     dropdownLabelTag.click(function() {
       const isOpen = $(this).hasClass('dropdown_state-open');
       if (!isOpen) {
@@ -71,27 +221,21 @@ $(function() {
         }
       });
     });
-    $(this).find('.dropdown__item').each(function() {
-
-      const valueTag = $(this).find('.dropdown__item-control-value');
-      const addBtn = $(this).find('.dropdown__item-control-add');
-      const removeBtn = $(this).find('.dropdown__item-control-remove');
-      addBtn.click(function() {
-        valueTag.html(+valueTag.html() + 1);
-        setMultiValue(dropdown);
-      });
-
-      removeBtn.click(function() {
-        const val = +valueTag.html();
-        if (val !== 0) {
-          valueTag.html(val === 0 ? 0 : val - 1);
-          setMultiValue(dropdown);
-        }
-      });
-
-    });
-    setMultiValue(dropdown);
-
+    setDropDownItemsHandlers(
+      dropdown,
+      dropdownLabelTag,
+      valueTag,
+      placeholder,
+      labelDeclensions,
+      isSingleValue,
+      applyBtn,
+      cleareBtn);
+    setValue(
+      dropdown,
+      dropdownLabelTag,
+      valueTag,
+      placeholder,
+      labelDeclensions,
+      isSingleValue);
   });
-
 });

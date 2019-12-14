@@ -20,6 +20,7 @@ include block/pagination/pagination
     placeholder: 'Сколько гостей',
     dropdown: {}
   }
+
   const dropdownRooms = {
     label: 'Dropdown',
     state: 'Default',
@@ -41,11 +42,11 @@ include block/pagination/pagination
         labelDeclensions: ['ванных комнат', 'ванная комната', 'ванные комнаты'],
       },
     ],
-
   }
+
   const dropdownRoomsExpanded = {
     label: 'Dropdown',
-    state: 'Default',
+    state: 'Expanded',
     placeholder: 'Сколько комнат',
     expanded: true,
     items: [
@@ -65,8 +66,55 @@ include block/pagination/pagination
           labelDeclensions: ['ванных комнат', 'ванная комната', 'ванные комнаты'],
         },
       ],
+  }
+
+  const dropdownGuestsApplyBtn = {
+    label: 'Dropdown',
+    placeholder: 'Сколько гостей',
+    labelDeclensions: ['гостей', 'гость', 'гостя'],
+    singleValue: true,
+    expanded: true,
+    applyBtn: true,
+    items: [
+      {
+        label: 'взрослые',
+        value: 0,
+      },
+      {
+        label: 'дети',
+        value: 0,
+      },
+      {
+        label: 'младенцы',
+        value: 0,
+      },
+    ],
 
   }
+  const dropdownGuestsApplyCleareBtn = {
+    label: 'Dropdown',
+    placeholder: 'Сколько гостей',
+    labelDeclensions: ['гостей', 'гость', 'гостя'],
+    singleValue: true,
+    expanded: true,
+    applyBtn: true,
+    cleareBtn: true,
+    items: [
+      {
+        label: 'взрослые',
+        value: 2,
+      },
+      {
+        label: 'дети',
+        value: 1,
+      },
+      {
+        label: 'младенцы',
+        value: 0,
+      },
+    ],
+  }
+
   const doubleDateRange = {
     first: {
       label: 'date Dropdown',
@@ -204,3 +252,9 @@ html
             +dropdown(dropdownRooms)
           .form-elements__input.form-elements__input_size-m
             +dropdown(dropdownRoomsExpanded)
+        .form-elements__content-column
+          .form-elements__input.form-elements__input_size-l
+            +dropdown(dropdownGuestsApplyBtn)
+        .form-elements__content-column
+          .form-elements__input.form-elements__input_size-l
+            +dropdown(dropdownGuestsApplyCleareBtn)

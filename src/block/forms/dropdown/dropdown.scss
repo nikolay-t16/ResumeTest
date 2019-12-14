@@ -82,6 +82,21 @@
     line-height: 29px;
     cursor: pointer;
   }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 19px 6px 7px 13px;
+    line-height: 15px;
+  }
+
+  &__apply-btn, &__cleare-btn {
+    cursor: pointer;
+  }
+
+  &__apply-btn {
+    color: $mainColor;
+  }
 }
 
 

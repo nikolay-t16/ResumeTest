@@ -1,3 +1,4 @@
+include ../icon-link/icon-link
 mixin dropdown(options = {})
   -
     const {
@@ -5,19 +6,23 @@ mixin dropdown(options = {})
       state = '',
       placeholder = '',
       expanded = false,
+      singleValue = false,
+      applyBtn = false,
+      cleareBtn = false,
+      labelDeclensions = [],
       items = []
     } = options;
-  .dropdown
+  .dropdown(data-single_value=+singleValue)
     if label || state
       .dropdown__header
         if label
           .cta-text= label
         if state
           .state-text= state
-    .dropdown__label(class = expanded ? 'dropdown_state-open': '' data-placeholder=placeholder)
+    .dropdown__label(class = expanded ? 'dropdown_state-open': '' data-placeholder=placeholder data-label_declensions=labelDeclensions)
       .dropdown__value= placeholder
       i.material-icons.dropdown__icon expand_more
-    .dropdown__items(class = expanded ? 'dropdown__items_state-open': '')
+    .dropdown__items(class = expanded ? 'dropdown__items_state-open': '' data-apply_btn=+applyBtn data-cleare_btn=+cleareBtn)
       if items
         each item in items
           .dropdown__item(data-label_declensions=JSON.stringify(item.labelDeclensions))
@@ -26,3 +31,10 @@ mixin dropdown(options = {})
               .dropdown__item-control-item.dropdown__item-control-remove -
               .dropdown__item-control-value.cta-text= item.value
               .dropdown__item-control-item.dropdown__item-control-add +
+      if applyBtn || cleareBtn
+        .dropdown__btns
+          .dropdown__cleare-btn
+            +icon-link({label: cleareBtn ? 'очистить' : '', theme: 'gray'})
+          if applyBtn
+            .dropdown__apply-btn
+              +icon-link({label: 'применить'})

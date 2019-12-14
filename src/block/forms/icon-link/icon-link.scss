@@ -1,11 +1,14 @@
 @import '../../../assets/scss/utils/vars';
 
-.icon-link__a {
+.icon-link {
   text-decoration: none;
   color: $mainColor;
 
   &:hover,
-  &.icon-link_state-hover {
+  &_state-hover {
     opacity: 0.5;
+  }
+  &_theme-gray {
+    color: $darkShade50;
   }
 }
