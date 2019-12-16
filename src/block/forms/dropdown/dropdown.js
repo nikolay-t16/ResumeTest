@@ -123,14 +123,21 @@ function setValue(
       dropdownLabelTag,
       valueTag,
       placeholder,
-      cleareValue
+      cleareValue,
     );
   }
 }
 
 function setDropDownItemsHandlers(
-  dropdown, dropdownLabelTag, valueTag, placeholder, labelDeclensions,
-  isSingleValue, applyBtn, cleareBtn) {
+  dropdown,
+  dropdownLabelTag,
+  valueTag,
+  placeholder,
+  labelDeclensions,
+  isSingleValue,
+  applyBtn,
+  cleareBtn
+) {
   dropdown.find('.dropdown__item').each(function() {
     const itemValueTag = $(this).find('.dropdown__item-control-value');
     const addBtn = $(this).find('.dropdown__item-control-add');
@@ -211,13 +218,13 @@ $(function() {
 
     const placeholder = dropdownLabelTag.data('placeholder');
     dropdownLabelTag.click(function() {
-      const isOpen = $(this).hasClass('dropdown_state-open');
+      const isOpen = $(this).hasClass('dropdown_open');
       if (!isOpen) {
-        $(this).addClass('dropdown_state-open');
+        $(this).addClass('dropdown_open');
       }
       dropdownItems.slideToggle(400, () => {
         if (isOpen) {
-          $(this).removeClass('dropdown_state-open');
+          $(this).removeClass('dropdown_open');
         }
       });
     });
@@ -229,13 +236,15 @@ $(function() {
       labelDeclensions,
       isSingleValue,
       applyBtn,
-      cleareBtn);
+      cleareBtn
+    );
     setValue(
       dropdown,
       dropdownLabelTag,
       valueTag,
       placeholder,
       labelDeclensions,
-      isSingleValue);
+      isSingleValue
+    );
   });
 });

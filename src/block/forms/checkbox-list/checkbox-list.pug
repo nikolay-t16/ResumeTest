@@ -3,14 +3,22 @@ mixin checkbox-list(options = {})
   -
     const {
     label = '',
+    dropdown = false,
+    open = false,
     items = [],
-    } = options
-  .checkbox-list
-    if label
-      .checkbox-list__label.cta-text
-        =label
+    } = options;
+    let itemsClassName = dropdown ? 'checkbox-list_dropdown-items' : '';
+    itemsClassName += dropdown && open ? ' checkbox-list_dropdown-items_open'  : '';
+    const dropdownIcon =  open ? 'expand_less' : 'expand_more';
+  .checkbox-list(class = dropdown ? 'checkbox-list_dropdown' : '')
+    .checkbox-list__header(class = dropdown ? 'checkbox-list__header_dropdown' : '')
+      if label
+        .checkbox-list__label.cta-text
+          =label
+      if dropdown
+        i.material-icons.checkbox-list__dropdown-icon= dropdownIcon
     if items
-      .checkbox-list__items
+      .checkbox-list__items(class = itemsClassName)
         each item in items
           .checkbox-list__item
             +checkbox(item)

@@ -5,7 +5,7 @@ mixin dropdown(options = {})
       label = '',
       state = '',
       placeholder = '',
-      expanded = false,
+      open = false,
       singleValue = false,
       applyBtn = false,
       cleareBtn = false,
@@ -19,10 +19,10 @@ mixin dropdown(options = {})
           .cta-text= label
         if state
           .state-text= state
-    .dropdown__label(class = expanded ? 'dropdown_state-open': '' data-placeholder=placeholder data-label_declensions=labelDeclensions)
+    .dropdown__label(class = open ? 'dropdown_open': '' data-placeholder=placeholder data-label_declensions=labelDeclensions)
       .dropdown__value= placeholder
       i.material-icons.dropdown__icon expand_more
-    .dropdown__items(class = expanded ? 'dropdown__items_state-open': '' data-apply_btn=+applyBtn data-cleare_btn=+cleareBtn)
+    .dropdown__items(class = open ? 'dropdown__items_open': '' data-apply_btn=+applyBtn data-cleare_btn=+cleareBtn)
       if items
         each item in items
           .dropdown__item(data-label_declensions=JSON.stringify(item.labelDeclensions))

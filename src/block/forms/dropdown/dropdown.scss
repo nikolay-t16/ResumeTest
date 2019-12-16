@@ -9,7 +9,7 @@
     cursor: pointer;
   }
 
-  &_state-open {
+  &_open {
     border-radius: 4px 4px 0 0;
   }
 
@@ -42,7 +42,7 @@
     padding-bottom: 6px;
   }
 
-  &__items_state-open {
+  &__items_open {
     display: block;
   }
 

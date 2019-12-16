@@ -8,7 +8,7 @@ mixin icon-link(options = {})
     } = options;
     let className = '';
     if(hover)
-      className = 'icon-link_state-hover';
+      className = 'icon-link_hover';
     if(theme === 'gray')
       className = 'icon-link_theme-gray';
   a.icon-link.cta-text(class=className href=url)= label

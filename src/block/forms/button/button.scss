@@ -31,7 +31,7 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
     outline: none;
   }
 
-  &:hover, &_state-hover {
+  &:hover, &_hover {
     opacity: 0.5;
   }
 
@@ -68,11 +68,11 @@ $background: linear-gradient(180deg, rgb(188, 156, 255) 0%, rgb(139, 164, 249) 1
     transform: translateZ(-1px);
   }
 
-  &_theme-empty:hover, &_theme-empty.button_state-hover {
+  &_theme-empty:hover, &_theme-empty.button_hover {
     opacity: 1;
   }
 
-  &_theme-empty:hover:before, &_state-hover:before {
+  &_theme-empty:hover:before, &_hover:before {
     opacity: 0.5;
   }
 

@@ -14,7 +14,7 @@
     margin: 0 auto;
     padding-left: 29px;
     display: grid;
-    grid-template-rows: 733px;
+    grid-template-rows: 733px 320px;
     grid-template-columns: 446px 392px 326px;
   }
 
@@ -165,5 +165,9 @@
 
   &__pagination-item {
     margin-top: 16px;
+  }
+
+  &__checkbox-list-dropdown {
+    margin-bottom: 32px;
   }
 }

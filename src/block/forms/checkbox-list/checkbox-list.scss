@@ -1,6 +1,32 @@
 .checkbox-list {
+  position: relative;
+
+  &__header {
+    display: flex;
+  }
+
+  &__header_dropdown {
+    cursor: pointer;
+  }
+
+  &__dropdown-icon {
+    line-height: 15px;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 1px;
+  }
+
   &__label {
     margin-bottom: 17px;
+  }
+
+  &_dropdown-items {
+    display: none;
+  }
+
+  &_dropdown-items_open {
+    display: block;
   }
 
   &__item {
