@@ -45,14 +45,6 @@ body {
   color: $darkShade50;
 }
 
-.state-text {
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: $darkShade50;
-}
-
 .input-text {
   @include defaultFont;
 }

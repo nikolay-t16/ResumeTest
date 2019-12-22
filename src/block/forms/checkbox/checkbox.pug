@@ -2,9 +2,15 @@ mixin checkbox(options = {})
   -
     const {
       label = '',
+      labelHeader = '',
       checked = false,
     } = options;
   label.checkbox
     input(type="checkbox" checked=checked).checkbox__input
     span.checkbox__checkmark
-    =label
+    .checkbox__label
+      if labelHeader
+        .checkbox__label-header.cta-text
+          =labelHeader
+      div(class=labelHeader ? 'checkbox__label-text' : '')
+        =label

@@ -162,6 +162,14 @@ include block/pagination/pagination
     ],
   }
 
+  const richCheckboxList = {
+    label: 'rich Checkbox Buttons',
+    items: [
+      {label: 'Ширина коридоров в номере не менее 91 см.', labelHeader: 'Широкий коридор'},
+      {label: 'На 1 этаже вас встретит специалист  и проводит до номера.', labelHeader: 'Помощник для инвалидов'},
+    ],
+  }
+
   const radioButtons = {
     label: 'Radio Buttons',
     name: 'sex',
@@ -292,3 +300,6 @@ html
             +checkbox-list(checkboxListDropdown)
           .form-elements__input.form-elements__input_size-m
             +checkbox-list(checkboxListDropdownOpen)
+        .form-elements__content-column
+          .form-elements__input.form-elements__input_size-m
+            +checkbox-list(richCheckboxList)
