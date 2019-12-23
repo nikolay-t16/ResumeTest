@@ -12,5 +12,4 @@ mixin checkbox(options = {})
       if labelHeader
         .checkbox__label-header.cta-text
           =labelHeader
-      div(class=labelHeader ? 'checkbox__label-text' : '')
-        =label
+      div(class=labelHeader ? 'checkbox__label-sub-text' : '') !{label}

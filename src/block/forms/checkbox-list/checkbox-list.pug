@@ -20,5 +20,5 @@ mixin checkbox-list(options = {})
     if items
       .checkbox-list__items(class = itemsClassName)
         each item in items
-          .checkbox-list__item
+          .checkbox-list__item(class = item.labelHeader ? 'checkbox-list__item_sub-text' : '')
             +checkbox(item)
