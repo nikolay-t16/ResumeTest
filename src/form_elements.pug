@@ -12,6 +12,7 @@ include block/forms/range-slider/range-slider
 include block/forms/button/button
 include block/forms/icon-link/icon-link
 include block/pagination/pagination
+include block/bullet-list/bullet-list
 
 -
   const dropdown = {
@@ -206,6 +207,15 @@ include block/pagination/pagination
     ],
   ];
 
+  const bulletList = {
+    label: 'bullet list',
+    items: [
+      'Нельзя с питомцами',
+      'Без вечеринок и мероприятий',
+      'Время прибытия — после 13:00,<br>а выезд до 12:00',
+    ],
+  }
+
 doctype html
 html
   +head({title: 'form_elements', page: 'form_elements'})
@@ -303,3 +313,6 @@ html
         .form-elements__content-column
           .form-elements__input
             +checkbox-list(richCheckboxList)
+        .form-elements__content-column
+          .form-elements__input
+            +bullet-list(bulletList)

@@ -1,0 +1,12 @@
+mixin bullet-list(options = {})
+    -
+        const {
+          items = [],
+          label = '',
+        } = options
+    .bullet-list
+        if label
+            .bullet-list__label.cta-text= label
+        .bullet-list__items
+            each item in items
+                li.bullet-list__item!= item
