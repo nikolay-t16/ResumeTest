@@ -1,0 +1,11 @@
+include icon-text-list-item/icon-text-list-item
+
+mixin icon-text-list(options = {})
+    -
+        const {
+          items = [],
+        } = options;
+    .icon-text-list
+        each item in items
+            .icon-text-list__item
+                +icon-text-list-item(item)

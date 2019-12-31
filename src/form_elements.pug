@@ -13,6 +13,7 @@ include block/forms/button/button
 include block/forms/icon-link/icon-link
 include block/pagination/pagination
 include block/bullet-list/bullet-list
+include block/icon-text-list/icon-text-list
 
 -
   const dropdown = {
@@ -216,6 +217,21 @@ include block/bullet-list/bullet-list
     ],
   }
 
+  const iconTextList = {
+    items: [
+      {
+        icon: 'insert_emoticon',
+        header: 'Комфорт',
+        text: 'Шумопоглощающие стены',
+      },
+      {
+        icon: 'location_city',
+        header: 'Удобство',
+        text: 'Окно в каждой из спален',
+      },
+    ],
+  };
+
 doctype html
 html
   +head({title: 'form_elements', page: 'form_elements'})
@@ -316,3 +332,6 @@ html
         .form-elements__content-column
           .form-elements__input
             +bullet-list(bulletList)
+        .form-elements__content-column
+          .form-elements__input
+            +icon-text-list(iconTextList)

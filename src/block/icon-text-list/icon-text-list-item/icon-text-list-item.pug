@@ -1,0 +1,13 @@
+mixin icon-text-list-item(options = {})
+    -
+        const {
+          icon = '',
+          header = '',
+          text = '',
+        } = options;
+    .icon-text-list-item
+        .icon-text-list-item__icon
+            i.material-icons.icon-text-list-item__icon-i= icon
+        .icon-text-list-item__content
+            .icon-text-list-item__header= header
+            .icon-text-list-item__text= text

@@ -13,3 +13,4 @@ import '../block/forms/button/button.js';
 import '../block/forms/icon-link/icon-link.js';
 import '../block/pagination/pagination.js';
 import '../block/bullet-list/bullet-list.js';
+import '../block/icon-text-list/icon-text-list.js';
